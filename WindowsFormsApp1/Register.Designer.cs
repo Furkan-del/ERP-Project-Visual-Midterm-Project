@@ -32,7 +32,6 @@ namespace WindowsFormsApp1
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
             this.ttpLiteral = new System.Windows.Forms.ToolTip(this.components);
-            this.txt_userName = new System.Windows.Forms.TextBox();
             this.txt_password = new System.Windows.Forms.TextBox();
             this.txt_email = new System.Windows.Forms.TextBox();
             this.txt_role = new System.Windows.Forms.TextBox();
@@ -46,19 +45,9 @@ namespace WindowsFormsApp1
             this.link_lbl = new System.Windows.Forms.LinkLabel();
             this.log_lbl = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.txt_userName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txt_userName
-            // 
-            this.txt_userName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_userName.Location = new System.Drawing.Point(226, 88);
-            this.txt_userName.Name = "txt_userName";
-            this.txt_userName.Size = new System.Drawing.Size(111, 22);
-            this.txt_userName.TabIndex = 0;
-            this.txt_userName.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.toolTip1.SetToolTip(this.txt_userName, "username");
-            this.ttpLiteral.SetToolTip(this.txt_userName, "User Name:\r\n");
             // 
             // txt_password
             // 
@@ -174,11 +163,20 @@ namespace WindowsFormsApp1
             this.log_lbl.TabIndex = 20;
             this.log_lbl.Text = "If you are already registered";
             // 
+            // txt_userName
+            // 
+            this.txt_userName.Location = new System.Drawing.Point(226, 88);
+            this.txt_userName.Name = "txt_userName";
+            this.txt_userName.Size = new System.Drawing.Size(111, 22);
+            this.txt_userName.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.txt_userName, "username");
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(796, 406);
+            this.Controls.Add(this.txt_userName);
             this.Controls.Add(this.log_lbl);
             this.Controls.Add(this.link_lbl);
             this.Controls.Add(this.txt_role);
@@ -191,7 +189,6 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.txt_password);
-            this.Controls.Add(this.txt_userName);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Register";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -205,7 +202,6 @@ namespace WindowsFormsApp1
 
         #endregion
         private System.Windows.Forms.ToolTip ttpLiteral;
-        private System.Windows.Forms.TextBox txt_userName;
         private System.Windows.Forms.TextBox txt_password;
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Label lblPassword;
@@ -219,5 +215,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.LinkLabel link_lbl;
         private System.Windows.Forms.Label log_lbl;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.TextBox txt_userName;
     }
 }

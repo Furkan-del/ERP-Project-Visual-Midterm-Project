@@ -23,7 +23,7 @@ namespace WindowsFormsApp1
         }
         static String connString = "Data Source= DESKTOP-6NDRJ67\\MSSQLSERVER01;Initial Catalog=erpTIRSAN;Integrated Security=True";
         SqlConnection sqlConnection = new SqlConnection(connString);
-        public static int idOfMan;
+        
 
        
         private void btn_list_Click(object sender, EventArgs e)
@@ -100,6 +100,6 @@ namespace WindowsFormsApp1
 
         }
 
-     
+        
     }
 }

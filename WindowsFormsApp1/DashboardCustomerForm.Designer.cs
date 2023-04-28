@@ -33,6 +33,8 @@ namespace WindowsFormsApp1
             this.label1 = new System.Windows.Forms.Label();
             this.btn_send = new System.Windows.Forms.Button();
             this.grpBox_customer = new System.Windows.Forms.GroupBox();
+            this.man_name_txt_box = new System.Windows.Forms.TextBox();
+            this.to_man = new System.Windows.Forms.Label();
             this.txt_sender = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_message = new System.Windows.Forms.TextBox();
@@ -49,13 +51,9 @@ namespace WindowsFormsApp1
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.detailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.to_man = new System.Windows.Forms.Label();
-            this.man_name_txt_box = new System.Windows.Forms.TextBox();
             this.grpBox_customer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpTIRSANDataSetBindingSource)).BeginInit();
@@ -100,6 +98,23 @@ namespace WindowsFormsApp1
             this.grpBox_customer.TabIndex = 16;
             this.grpBox_customer.TabStop = false;
             this.grpBox_customer.Text = "CustomerDashBoard";
+            // 
+            // man_name_txt_box
+            // 
+            this.man_name_txt_box.Location = new System.Drawing.Point(126, 167);
+            this.man_name_txt_box.Name = "man_name_txt_box";
+            this.man_name_txt_box.Size = new System.Drawing.Size(140, 22);
+            this.man_name_txt_box.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.man_name_txt_box, "manufacturer Name");
+            // 
+            // to_man
+            // 
+            this.to_man.AutoSize = true;
+            this.to_man.Location = new System.Drawing.Point(16, 172);
+            this.to_man.Name = "to_man";
+            this.to_man.Size = new System.Drawing.Size(25, 17);
+            this.to_man.TabIndex = 25;
+            this.to_man.Text = "To";
             // 
             // txt_sender
             // 
@@ -214,9 +229,7 @@ namespace WindowsFormsApp1
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuItemToolStripMenuItem,
-            this.detailsToolStripMenuItem,
-            this.aboutsToolStripMenuItem,
-            this.toolStripMenuItem1});
+            this.detailsToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "File";
@@ -224,26 +237,15 @@ namespace WindowsFormsApp1
             // menuItemToolStripMenuItem
             // 
             this.menuItemToolStripMenuItem.Name = "menuItemToolStripMenuItem";
-            this.menuItemToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
+            this.menuItemToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.menuItemToolStripMenuItem.Text = "menuItem";
+          
             // 
             // detailsToolStripMenuItem
             // 
             this.detailsToolStripMenuItem.Name = "detailsToolStripMenuItem";
-            this.detailsToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
+            this.detailsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.detailsToolStripMenuItem.Text = "details";
-            // 
-            // aboutsToolStripMenuItem
-            // 
-            this.aboutsToolStripMenuItem.Name = "aboutsToolStripMenuItem";
-            this.aboutsToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
-            this.aboutsToolStripMenuItem.Text = "abouts";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(225, 26);
-            this.toolStripMenuItem1.Text = "toolStripMenuItem1";
             // 
             // editToolStripMenuItem
             // 
@@ -256,23 +258,6 @@ namespace WindowsFormsApp1
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
             this.aboutToolStripMenuItem.Text = "About";
-            // 
-            // to_man
-            // 
-            this.to_man.AutoSize = true;
-            this.to_man.Location = new System.Drawing.Point(16, 172);
-            this.to_man.Name = "to_man";
-            this.to_man.Size = new System.Drawing.Size(25, 17);
-            this.to_man.TabIndex = 25;
-            this.to_man.Text = "To";
-            // 
-            // man_name_txt_box
-            // 
-            this.man_name_txt_box.Location = new System.Drawing.Point(126, 167);
-            this.man_name_txt_box.Name = "man_name_txt_box";
-            this.man_name_txt_box.Size = new System.Drawing.Size(140, 22);
-            this.man_name_txt_box.TabIndex = 3;
-            this.toolTip1.SetToolTip(this.man_name_txt_box, "manufacturer Name");
             // 
             // DashboardCustomerForm
             // 
@@ -323,11 +308,9 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menuItemToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem detailsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aboutsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.TextBox man_name_txt_box;
         private System.Windows.Forms.Label to_man;
     }

@@ -54,6 +54,7 @@ namespace WindowsFormsApp1
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btn_exit = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.back_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.loggerBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpTIRSANDataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpTIRSANDataSet1)).BeginInit();
@@ -254,11 +255,24 @@ namespace WindowsFormsApp1
             this.btn_exit.UseVisualStyleBackColor = true;
             this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
+            // back_btn
+            // 
+            this.back_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.back_btn.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.back_btn.Location = new System.Drawing.Point(722, 296);
+            this.back_btn.Name = "back_btn";
+            this.back_btn.Size = new System.Drawing.Size(162, 37);
+            this.back_btn.TabIndex = 19;
+            this.back_btn.Text = "BACK";
+            this.back_btn.UseVisualStyleBackColor = true;
+            this.back_btn.Click += new System.EventHandler(this.back_btn_Click);
+            // 
             // ManufacturerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1428, 668);
+            this.Controls.Add(this.back_btn);
             this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.grp_box_Send);
@@ -311,5 +325,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.DataGridView dataGridViewMsg;
         private System.Windows.Forms.DataGridView dataGridViewStock;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button back_btn;
     }
 }

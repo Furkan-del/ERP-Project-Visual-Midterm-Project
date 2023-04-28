@@ -64,8 +64,9 @@ namespace WindowsFormsApp1
                     sqlData.Fill(dataTable);
                     dataGridViewStock.DataSource = dataTable;
 
-
-                    SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("select  senderOfMessage,messagefromcustomer from manufacturerFactory m INNER JOIN logger ON m.id = logger.manufacturerId ", sqlConnection);
+                    SqlCommand sql = new SqlCommand("select  senderOfMessage,messagefromcustomer from manufacturerFactory m INNER JOIN logger ON m.id = logger.manufacturerId WHERE m.id = @manId", sqlConnection);
+                    sql.Parameters.AddWithValue("@manId", DashboardCustomerForm.idMan);
+                    SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sql);
                     DataTable dt = new DataTable();
                     sqlDataAdapter.Fill(dt);
                     dataGridViewMsg.DataSource = dt;
@@ -87,6 +88,11 @@ namespace WindowsFormsApp1
             Application.Exit();
         }
 
-     
+        private void back_btn_Click(object sender, EventArgs e)
+        {
+            var goBackManInfForm = new ManufacturerInfoForm();
+            goBackManInfForm.Show();
+            this.Close();
+        }
     }
 }
