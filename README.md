@@ -32,4 +32,4 @@ USE CASE DIAGRAM
 
 
 ERD DIAGRAM
-![image](https://user-images.githubusercontent.com/57002551/235094672-8bcfedb4-9a90-4e18-ba43-4895165cd368.png)
+![image](https://user-images.githubusercontent.com/57002551/235125594-8398078a-fe8e-4a42-a8d9-eb75b40a186a.png)
