@@ -124,7 +124,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.lbl_password);
             this.Controls.Add(this.lbl_user);
             this.Name = "LogInForm";
-            this.Text = "LogInForm";
+            this.Text = "LogIn";
             ((System.ComponentModel.ISupportInitialize)(this.erpTIRSANDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);

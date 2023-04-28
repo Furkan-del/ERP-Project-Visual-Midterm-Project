@@ -64,8 +64,8 @@ namespace WindowsFormsApp1
                     sqlData.Fill(dataTable);
                     dataGridViewStock.DataSource = dataTable;
 
-                    SqlCommand sql = new SqlCommand("select  senderOfMessage,messagefromcustomer from manufacturerFactory m INNER JOIN logger ON m.id = logger.manufacturerId WHERE m.id = @manId", sqlConnection);
-                    sql.Parameters.AddWithValue("@manId", DashboardCustomerForm.idMan);
+                    SqlCommand sql = new SqlCommand("select  senderOfMessage,messagefromcustomer from logger where manufacturerId=(SELECT id from manufacturerFactory  where userId=@userId)", sqlConnection);
+                    sql.Parameters.AddWithValue("@userId", LogInForm.idOfManufacturer);
                     SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sql);
                     DataTable dt = new DataTable();
                     sqlDataAdapter.Fill(dt);

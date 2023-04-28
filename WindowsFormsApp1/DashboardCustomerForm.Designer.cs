@@ -92,7 +92,7 @@ namespace WindowsFormsApp1
             this.grpBox_customer.Controls.Add(this.txt_message);
             this.grpBox_customer.Controls.Add(this.label2);
             this.grpBox_customer.Controls.Add(this.label1);
-            this.grpBox_customer.Location = new System.Drawing.Point(34, 29);
+            this.grpBox_customer.Location = new System.Drawing.Point(24, 43);
             this.grpBox_customer.Name = "grpBox_customer";
             this.grpBox_customer.Size = new System.Drawing.Size(272, 308);
             this.grpBox_customer.TabIndex = 16;
@@ -237,14 +237,13 @@ namespace WindowsFormsApp1
             // menuItemToolStripMenuItem
             // 
             this.menuItemToolStripMenuItem.Name = "menuItemToolStripMenuItem";
-            this.menuItemToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.menuItemToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.menuItemToolStripMenuItem.Text = "menuItem";
-          
             // 
             // detailsToolStripMenuItem
             // 
             this.detailsToolStripMenuItem.Name = "detailsToolStripMenuItem";
-            this.detailsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.detailsToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.detailsToolStripMenuItem.Text = "details";
             // 
             // editToolStripMenuItem
@@ -273,7 +272,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.menuStrip2);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "DashboardCustomerForm";
-            this.Text = "DashboardForm";
+            this.Text = "DashboardCustomer";
             this.grpBox_customer.ResumeLayout(false);
             this.grpBox_customer.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();

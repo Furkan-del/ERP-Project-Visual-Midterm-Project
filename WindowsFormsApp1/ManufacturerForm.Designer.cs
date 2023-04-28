@@ -71,7 +71,7 @@ namespace WindowsFormsApp1
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 9);
+            this.label1.Location = new System.Drawing.Point(35, 102);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 17);
             this.label1.TabIndex = 0;
@@ -127,7 +127,7 @@ namespace WindowsFormsApp1
             // 
             this.btn_warehouses.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_warehouses.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btn_warehouses.Location = new System.Drawing.Point(722, 158);
+            this.btn_warehouses.Location = new System.Drawing.Point(720, 183);
             this.btn_warehouses.Name = "btn_warehouses";
             this.btn_warehouses.Size = new System.Drawing.Size(162, 63);
             this.btn_warehouses.TabIndex = 5;
@@ -229,7 +229,7 @@ namespace WindowsFormsApp1
             this.grp_box_Send.Controls.Add(this.lbl_qty);
             this.grp_box_Send.Controls.Add(this.txt_qty);
             this.grp_box_Send.Controls.Add(this.btn_sendProduct);
-            this.grp_box_Send.Location = new System.Drawing.Point(38, 39);
+            this.grp_box_Send.Location = new System.Drawing.Point(52, 132);
             this.grp_box_Send.Name = "grp_box_Send";
             this.grp_box_Send.Size = new System.Drawing.Size(567, 235);
             this.grp_box_Send.TabIndex = 17;
@@ -238,7 +238,7 @@ namespace WindowsFormsApp1
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(664, 12);
+            this.dateTimePicker1.Location = new System.Drawing.Point(945, 85);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker1.TabIndex = 18;
@@ -247,7 +247,7 @@ namespace WindowsFormsApp1
             // 
             this.btn_exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_exit.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btn_exit.Location = new System.Drawing.Point(722, 237);
+            this.btn_exit.Location = new System.Drawing.Point(720, 262);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(162, 37);
             this.btn_exit.TabIndex = 6;
@@ -259,7 +259,7 @@ namespace WindowsFormsApp1
             // 
             this.back_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.back_btn.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.back_btn.Location = new System.Drawing.Point(722, 296);
+            this.back_btn.Location = new System.Drawing.Point(720, 321);
             this.back_btn.Name = "back_btn";
             this.back_btn.Size = new System.Drawing.Size(162, 37);
             this.back_btn.TabIndex = 19;
@@ -281,7 +281,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.btn_warehouses);
             this.Controls.Add(this.label1);
             this.Name = "ManufacturerForm";
-            this.Text = "ManufacturerForm";
+            this.Text = "Manufacturer";
             ((System.ComponentModel.ISupportInitialize)(this.loggerBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpTIRSANDataSet1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpTIRSANDataSet1)).EndInit();

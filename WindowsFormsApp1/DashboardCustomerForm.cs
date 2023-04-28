@@ -40,7 +40,7 @@ namespace WindowsFormsApp1
             {
 
                     sqlConnection.Open();
-                    string query = "select id from manufacturerFactory where manufacturerName ='"+man_name_txt_box.Text+ "' ";
+                    string query = "select id from manufacturerFactory where manufacturerName ='"+man_name_txt_box.Text+ "'";
                     SqlCommand command = new SqlCommand(query, sqlConnection);
                     SqlDataReader sql1 = command.ExecuteReader();
                 if (sql1.Read())
@@ -55,7 +55,7 @@ namespace WindowsFormsApp1
                 }
 
 
-                string save = "insert into logger(messagefromcustomer,senderOfMessage,userId,manufacturerId)VALUES(@msg,@sender,@userId,@manufacturerId) ";
+                string save = "insert into logger(messagefromcustomer,senderOfMessage,userId,manufacturerId)VALUES(@msg,@sender,@userId,@manufacturerId)";
                     sqlCommand = new SqlCommand(save, sqlConnection);
                     sqlCommand.Parameters.AddWithValue("@msg", txt_message.Text);
                     sqlCommand.Parameters.AddWithValue("@sender", txt_sender.Text);
