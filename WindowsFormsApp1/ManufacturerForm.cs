@@ -64,7 +64,8 @@ namespace WindowsFormsApp1
                     sqlData.Fill(dataTable);
                     dataGridViewStock.DataSource = dataTable;
 
-                    SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("select  senderOfMessage,messagefromcustomer from users INNER JOIN logger ON users.id = logger.userId ", sqlConnection);
+
+                    SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("select  senderOfMessage,messagefromcustomer from manufacturerFactory m INNER JOIN logger ON m.id = logger.manufacturerId ", sqlConnection);
                     DataTable dt = new DataTable();
                     sqlDataAdapter.Fill(dt);
                     dataGridViewMsg.DataSource = dt;

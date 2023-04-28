@@ -50,10 +50,12 @@ namespace WindowsFormsApp1
             this.menuItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.detailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.to_man = new System.Windows.Forms.Label();
+            this.man_name_txt_box = new System.Windows.Forms.TextBox();
             this.grpBox_customer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpTIRSANDataSetBindingSource)).BeginInit();
@@ -85,6 +87,8 @@ namespace WindowsFormsApp1
             // 
             // grpBox_customer
             // 
+            this.grpBox_customer.Controls.Add(this.man_name_txt_box);
+            this.grpBox_customer.Controls.Add(this.to_man);
             this.grpBox_customer.Controls.Add(this.txt_sender);
             this.grpBox_customer.Controls.Add(this.label5);
             this.grpBox_customer.Controls.Add(this.txt_message);
@@ -157,7 +161,7 @@ namespace WindowsFormsApp1
             this.btn_list.Location = new System.Drawing.Point(412, 169);
             this.btn_list.Name = "btn_list";
             this.btn_list.Size = new System.Drawing.Size(141, 50);
-            this.btn_list.TabIndex = 3;
+            this.btn_list.TabIndex = 4;
             this.btn_list.Text = "List All Products";
             this.btn_list.UseVisualStyleBackColor = true;
             this.btn_list.Click += new System.EventHandler(this.btn_list_Click_1);
@@ -169,7 +173,7 @@ namespace WindowsFormsApp1
             this.btn_exit.Location = new System.Drawing.Point(412, 242);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(141, 41);
-            this.btn_exit.TabIndex = 4;
+            this.btn_exit.TabIndex = 5;
             this.btn_exit.Text = "EXIT";
             this.btn_exit.UseVisualStyleBackColor = true;
             this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
@@ -220,20 +224,26 @@ namespace WindowsFormsApp1
             // menuItemToolStripMenuItem
             // 
             this.menuItemToolStripMenuItem.Name = "menuItemToolStripMenuItem";
-            this.menuItemToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.menuItemToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
             this.menuItemToolStripMenuItem.Text = "menuItem";
             // 
             // detailsToolStripMenuItem
             // 
             this.detailsToolStripMenuItem.Name = "detailsToolStripMenuItem";
-            this.detailsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.detailsToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
             this.detailsToolStripMenuItem.Text = "details";
             // 
             // aboutsToolStripMenuItem
             // 
             this.aboutsToolStripMenuItem.Name = "aboutsToolStripMenuItem";
-            this.aboutsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.aboutsToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
             this.aboutsToolStripMenuItem.Text = "abouts";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(225, 26);
+            this.toolStripMenuItem1.Text = "toolStripMenuItem1";
             // 
             // editToolStripMenuItem
             // 
@@ -247,11 +257,22 @@ namespace WindowsFormsApp1
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
             this.aboutToolStripMenuItem.Text = "About";
             // 
-            // toolStripMenuItem1
+            // to_man
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(225, 26);
-            this.toolStripMenuItem1.Text = "toolStripMenuItem1";
+            this.to_man.AutoSize = true;
+            this.to_man.Location = new System.Drawing.Point(16, 172);
+            this.to_man.Name = "to_man";
+            this.to_man.Size = new System.Drawing.Size(25, 17);
+            this.to_man.TabIndex = 25;
+            this.to_man.Text = "To";
+            // 
+            // man_name_txt_box
+            // 
+            this.man_name_txt_box.Location = new System.Drawing.Point(126, 167);
+            this.man_name_txt_box.Name = "man_name_txt_box";
+            this.man_name_txt_box.Size = new System.Drawing.Size(140, 22);
+            this.man_name_txt_box.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.man_name_txt_box, "manufacturer Name");
             // 
             // DashboardCustomerForm
             // 
@@ -307,5 +328,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.TextBox man_name_txt_box;
+        private System.Windows.Forms.Label to_man;
     }
 }
