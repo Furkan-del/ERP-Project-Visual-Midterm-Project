@@ -55,6 +55,12 @@ namespace WindowsFormsApp1
             this.btn_exit = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.back_btn = new System.Windows.Forms.Button();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.man_name = new System.Windows.Forms.ToolStripMenuItem();
+            this.manName_menu = new System.Windows.Forms.ToolStripMenuItem();
+            this.location_men_itm = new System.Windows.Forms.ToolStripMenuItem();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.loggerBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpTIRSANDataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpTIRSANDataSet1)).BeginInit();
@@ -66,6 +72,7 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productswarehousesBindingSource)).BeginInit();
             this.grp_box_Send.SuspendLayout();
+            this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -267,11 +274,59 @@ namespace WindowsFormsApp1
             this.back_btn.UseVisualStyleBackColor = true;
             this.back_btn.Click += new System.EventHandler(this.back_btn_Click);
             // 
+            // menuStrip2
+            // 
+            this.menuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.man_name,
+            this.editToolStripMenuItem,
+            this.aboutToolStripMenuItem});
+            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Size = new System.Drawing.Size(1428, 28);
+            this.menuStrip2.TabIndex = 20;
+            this.menuStrip2.Text = "menuStrip2";
+            // 
+            // man_name
+            // 
+            this.man_name.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.manName_menu,
+            this.location_men_itm});
+            this.man_name.Name = "man_name";
+            this.man_name.Size = new System.Drawing.Size(141, 24);
+            this.man_name.Text = "Manufacturer Info";
+            this.man_name.Click += new System.EventHandler(this.man_name_Click);
+            // 
+            // manName_menu
+            // 
+            this.manName_menu.Name = "manName_menu";
+            this.manName_menu.Size = new System.Drawing.Size(224, 26);
+            this.manName_menu.Text = "cus name";
+            // 
+            // location_men_itm
+            // 
+            this.location_men_itm.Name = "location_men_itm";
+            this.location_men_itm.Size = new System.Drawing.Size(224, 26);
+            this.location_men_itm.Text = "details";
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(49, 24);
+            this.editToolStripMenuItem.Text = "Edit";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
+            this.aboutToolStripMenuItem.Text = "About";
+            // 
             // ManufacturerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1428, 668);
+            this.Controls.Add(this.menuStrip2);
             this.Controls.Add(this.back_btn);
             this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.dateTimePicker1);
@@ -294,6 +349,8 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.productswarehousesBindingSource)).EndInit();
             this.grp_box_Send.ResumeLayout(false);
             this.grp_box_Send.PerformLayout();
+            this.menuStrip2.ResumeLayout(false);
+            this.menuStrip2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -326,5 +383,11 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.DataGridView dataGridViewStock;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button back_btn;
+        private System.Windows.Forms.MenuStrip menuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem man_name;
+        private System.Windows.Forms.ToolStripMenuItem manName_menu;
+        private System.Windows.Forms.ToolStripMenuItem location_men_itm;
+        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
     }
 }

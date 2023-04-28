@@ -48,9 +48,9 @@ namespace WindowsFormsApp1
             this.dataGridViewCustomer = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.detailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cus_menu_strip = new System.Windows.Forms.ToolStripMenuItem();
+            this.cusname = new System.Windows.Forms.ToolStripMenuItem();
+            this.location_men_itm = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
@@ -216,7 +216,7 @@ namespace WindowsFormsApp1
             // 
             this.menuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
+            this.cus_menu_strip,
             this.editToolStripMenuItem,
             this.aboutToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
@@ -225,26 +225,27 @@ namespace WindowsFormsApp1
             this.menuStrip2.TabIndex = 19;
             this.menuStrip2.Text = "menuStrip2";
             // 
-            // fileToolStripMenuItem
+            // cus_menu_strip
             // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuItemToolStripMenuItem,
-            this.detailsToolStripMenuItem});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
-            this.fileToolStripMenuItem.Text = "File";
+            this.cus_menu_strip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cusname,
+            this.location_men_itm});
+            this.cus_menu_strip.Name = "cus_menu_strip";
+            this.cus_menu_strip.Size = new System.Drawing.Size(76, 24);
+            this.cus_menu_strip.Text = "Cus Info";
+            this.cus_menu_strip.Click += new System.EventHandler(this.fileToolStripMenuItem_Click);
             // 
-            // menuItemToolStripMenuItem
+            // cusname
             // 
-            this.menuItemToolStripMenuItem.Name = "menuItemToolStripMenuItem";
-            this.menuItemToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
-            this.menuItemToolStripMenuItem.Text = "menuItem";
+            this.cusname.Name = "cusname";
+            this.cusname.Size = new System.Drawing.Size(224, 26);
+            this.cusname.Text = "cus name";
             // 
-            // detailsToolStripMenuItem
+            // location_men_itm
             // 
-            this.detailsToolStripMenuItem.Name = "detailsToolStripMenuItem";
-            this.detailsToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
-            this.detailsToolStripMenuItem.Text = "details";
+            this.location_men_itm.Name = "location_men_itm";
+            this.location_men_itm.Size = new System.Drawing.Size(224, 26);
+            this.location_men_itm.Text = "details";
             // 
             // editToolStripMenuItem
             // 
@@ -304,9 +305,9 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.DataGridView dataGridViewCustomer;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.MenuStrip menuStrip2;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem menuItemToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem detailsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cus_menu_strip;
+        private System.Windows.Forms.ToolStripMenuItem cusname;
+        private System.Windows.Forms.ToolStripMenuItem location_men_itm;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolTip toolTip1;

@@ -94,5 +94,23 @@ namespace WindowsFormsApp1
             goBackManInfForm.Show();
             this.Close();
         }
+
+        private void man_name_Click(object sender, EventArgs e)
+        {
+            sqlConnection.Open();
+            string query = "select * from manufacturerFactory where id=@manId ";
+
+            SqlCommand command = new SqlCommand(query, sqlConnection);
+            command.Parameters.AddWithValue("@manId", LogInForm.idOfManufacturer);
+            SqlDataReader sqlDataReader = command.ExecuteReader();
+            while (sqlDataReader.Read())
+            {
+                manName_menu.Text = sqlDataReader["manufacturerName"].ToString();
+                location_men_itm.Text = sqlDataReader["addressOfFactory"].ToString();
+
+            }
+            sqlDataReader.Close();
+            
+        }
     }
 }

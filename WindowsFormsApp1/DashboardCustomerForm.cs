@@ -98,8 +98,24 @@ namespace WindowsFormsApp1
             sqlData.Fill(table);
             dataGridViewCustomer.DataSource = table;
 
+
         }
 
-        
+        private void fileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            sqlConnection.Open();
+            string query = "select * from customerfactory where id=@cusId ";
+
+            SqlCommand command = new SqlCommand(query,sqlConnection);
+            command.Parameters.AddWithValue("@cusId", LogInForm.idOfCustomer);
+            SqlDataReader sqlDataReader = command.ExecuteReader();
+            while (sqlDataReader.Read())
+            {
+                cusname.Text = sqlDataReader["customerName"].ToString();
+                location_men_itm.Text = sqlDataReader["addressOfFactory"].ToString();
+
+            }
+            sqlDataReader.Close();
+        }
     }
 }
