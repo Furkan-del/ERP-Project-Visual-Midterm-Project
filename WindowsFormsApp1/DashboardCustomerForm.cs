@@ -34,11 +34,8 @@ namespace WindowsFormsApp1
 
         private void btn_send_Click(object sender, EventArgs e)
         {
-            
-
             try
             {
-
                     sqlConnection.Open();
                     string query = "select id from manufacturerFactory where manufacturerName ='"+man_name_txt_box.Text+ "'";
                     SqlCommand command = new SqlCommand(query, sqlConnection);
@@ -104,10 +101,10 @@ namespace WindowsFormsApp1
         private void fileToolStripMenuItem_Click(object sender, EventArgs e)
         {
             sqlConnection.Open();
-            string query = "select * from customerfactory where id=@cusId ";
+            string query = "select * from customerfactory where userId=@userId ";
 
             SqlCommand command = new SqlCommand(query,sqlConnection);
-            command.Parameters.AddWithValue("@cusId", LogInForm.idOfCustomer);
+            command.Parameters.AddWithValue("@userId", LogInForm.idOfCustomer);
             SqlDataReader sqlDataReader = command.ExecuteReader();
             while (sqlDataReader.Read())
             {

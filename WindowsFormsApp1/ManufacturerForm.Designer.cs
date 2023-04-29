@@ -126,7 +126,7 @@ namespace WindowsFormsApp1
             this.btn_sendProduct.Name = "btn_sendProduct";
             this.btn_sendProduct.Size = new System.Drawing.Size(147, 38);
             this.btn_sendProduct.TabIndex = 3;
-            this.btn_sendProduct.Text = "Send Product";
+            this.btn_sendProduct.Text = "&Send Product";
             this.btn_sendProduct.UseVisualStyleBackColor = true;
             this.btn_sendProduct.Click += new System.EventHandler(this.btn_sendProduct_Click);
             // 
@@ -138,7 +138,7 @@ namespace WindowsFormsApp1
             this.btn_warehouses.Name = "btn_warehouses";
             this.btn_warehouses.Size = new System.Drawing.Size(162, 63);
             this.btn_warehouses.TabIndex = 5;
-            this.btn_warehouses.Text = "Stock Information";
+            this.btn_warehouses.Text = "&Stock Information";
             this.btn_warehouses.UseVisualStyleBackColor = true;
             this.btn_warehouses.Click += new System.EventHandler(this.btn_warehouses_Click);
             // 
@@ -258,7 +258,7 @@ namespace WindowsFormsApp1
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(162, 37);
             this.btn_exit.TabIndex = 6;
-            this.btn_exit.Text = "EXIT";
+            this.btn_exit.Text = "&EXIT";
             this.btn_exit.UseVisualStyleBackColor = true;
             this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
@@ -270,7 +270,7 @@ namespace WindowsFormsApp1
             this.back_btn.Name = "back_btn";
             this.back_btn.Size = new System.Drawing.Size(162, 37);
             this.back_btn.TabIndex = 19;
-            this.back_btn.Text = "BACK";
+            this.back_btn.Text = "&BACK";
             this.back_btn.UseVisualStyleBackColor = true;
             this.back_btn.Click += new System.EventHandler(this.back_btn_Click);
             // 
@@ -283,7 +283,7 @@ namespace WindowsFormsApp1
             this.aboutToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(1428, 28);
+            this.menuStrip2.Size = new System.Drawing.Size(1428, 30);
             this.menuStrip2.TabIndex = 20;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -293,32 +293,32 @@ namespace WindowsFormsApp1
             this.manName_menu,
             this.location_men_itm});
             this.man_name.Name = "man_name";
-            this.man_name.Size = new System.Drawing.Size(141, 24);
+            this.man_name.Size = new System.Drawing.Size(141, 26);
             this.man_name.Text = "Manufacturer Info";
             this.man_name.Click += new System.EventHandler(this.man_name_Click);
             // 
             // manName_menu
             // 
             this.manName_menu.Name = "manName_menu";
-            this.manName_menu.Size = new System.Drawing.Size(224, 26);
+            this.manName_menu.Size = new System.Drawing.Size(154, 26);
             this.manName_menu.Text = "cus name";
             // 
             // location_men_itm
             // 
             this.location_men_itm.Name = "location_men_itm";
-            this.location_men_itm.Size = new System.Drawing.Size(224, 26);
+            this.location_men_itm.Size = new System.Drawing.Size(154, 26);
             this.location_men_itm.Text = "details";
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(49, 24);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(49, 26);
             this.editToolStripMenuItem.Text = "Edit";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(64, 26);
             this.aboutToolStripMenuItem.Text = "About";
             // 
             // ManufacturerForm

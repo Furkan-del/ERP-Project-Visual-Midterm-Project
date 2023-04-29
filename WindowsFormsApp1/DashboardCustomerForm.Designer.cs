@@ -79,7 +79,7 @@ namespace WindowsFormsApp1
             this.btn_send.Name = "btn_send";
             this.btn_send.Size = new System.Drawing.Size(141, 50);
             this.btn_send.TabIndex = 0;
-            this.btn_send.Text = "Send  Request";
+            this.btn_send.Text = "&Send  Request";
             this.btn_send.UseVisualStyleBackColor = true;
             this.btn_send.Click += new System.EventHandler(this.btn_send_Click);
             // 
@@ -177,7 +177,7 @@ namespace WindowsFormsApp1
             this.btn_list.Name = "btn_list";
             this.btn_list.Size = new System.Drawing.Size(141, 50);
             this.btn_list.TabIndex = 4;
-            this.btn_list.Text = "List All Products";
+            this.btn_list.Text = "&List All Products";
             this.btn_list.UseVisualStyleBackColor = true;
             this.btn_list.Click += new System.EventHandler(this.btn_list_Click_1);
             // 
@@ -189,7 +189,7 @@ namespace WindowsFormsApp1
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(141, 41);
             this.btn_exit.TabIndex = 5;
-            this.btn_exit.Text = "EXIT";
+            this.btn_exit.Text = "&EXIT";
             this.btn_exit.UseVisualStyleBackColor = true;
             this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
@@ -206,9 +206,9 @@ namespace WindowsFormsApp1
             // menuStrip1
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Location = new System.Drawing.Point(0, 28);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 30);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(896, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(896, 30);
             this.menuStrip1.TabIndex = 18;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -221,7 +221,7 @@ namespace WindowsFormsApp1
             this.aboutToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(896, 28);
+            this.menuStrip2.Size = new System.Drawing.Size(896, 30);
             this.menuStrip2.TabIndex = 19;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -231,32 +231,32 @@ namespace WindowsFormsApp1
             this.cusname,
             this.location_men_itm});
             this.cus_menu_strip.Name = "cus_menu_strip";
-            this.cus_menu_strip.Size = new System.Drawing.Size(76, 24);
+            this.cus_menu_strip.Size = new System.Drawing.Size(76, 26);
             this.cus_menu_strip.Text = "Cus Info";
             this.cus_menu_strip.Click += new System.EventHandler(this.fileToolStripMenuItem_Click);
             // 
             // cusname
             // 
             this.cusname.Name = "cusname";
-            this.cusname.Size = new System.Drawing.Size(224, 26);
+            this.cusname.Size = new System.Drawing.Size(154, 26);
             this.cusname.Text = "cus name";
             // 
             // location_men_itm
             // 
             this.location_men_itm.Name = "location_men_itm";
-            this.location_men_itm.Size = new System.Drawing.Size(224, 26);
+            this.location_men_itm.Size = new System.Drawing.Size(154, 26);
             this.location_men_itm.Text = "details";
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(49, 24);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(49, 26);
             this.editToolStripMenuItem.Text = "Edit";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(64, 26);
             this.aboutToolStripMenuItem.Text = "About";
             // 
             // DashboardCustomerForm

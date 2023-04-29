@@ -21,7 +21,8 @@ namespace WindowsFormsApp1
         SqlCommand sqlCommand;
         public static int idOfCustomer;
         public static int idOfManufacturer;
-
+       
+        
 
         public LogInForm()
         {
@@ -72,6 +73,7 @@ namespace WindowsFormsApp1
                     while (sqlData.Read())
                     {
                         idOfManufacturer = sqlData.GetInt32(0);
+                      
                     }
 
 

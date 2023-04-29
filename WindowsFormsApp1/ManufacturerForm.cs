@@ -58,8 +58,10 @@ namespace WindowsFormsApp1
                 
                     sqlConnection.Open();
                     
-                    string query= "select w.numberOfWarehouses,w.location,p.name,p.orderTime,p.price,p.quantityOfProduct from warehouses w ,products as p WHERE p.id = w.id";
-                    SqlDataAdapter sqlData = new SqlDataAdapter(query, sqlConnection);
+                    string query= "select w.numberOfWarehouses,w.location,p.name,p.orderTime,p.price,p.quantityOfProduct from warehouses w ,products as p WHERE p.id = w.productId AND w.manufacturerID=(select id from manufacturerFactory where userId=@userId)";
+                    SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+                    sqlCommand.Parameters.AddWithValue("@userId", LogInForm.idOfManufacturer);
+                    SqlDataAdapter sqlData = new SqlDataAdapter(sqlCommand);
                     DataTable dataTable = new DataTable();
                     sqlData.Fill(dataTable);
                     dataGridViewStock.DataSource = dataTable;
@@ -98,10 +100,10 @@ namespace WindowsFormsApp1
         private void man_name_Click(object sender, EventArgs e)
         {
             sqlConnection.Open();
-            string query = "select * from manufacturerFactory where id=@manId ";
+            string query = "select * from manufacturerFactory where userId=@userId ";
 
             SqlCommand command = new SqlCommand(query, sqlConnection);
-            command.Parameters.AddWithValue("@manId", LogInForm.idOfManufacturer);
+            command.Parameters.AddWithValue("@userId", LogInForm.idOfManufacturer);
             SqlDataReader sqlDataReader = command.ExecuteReader();
             while (sqlDataReader.Read())
             {
