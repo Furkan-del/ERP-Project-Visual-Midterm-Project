@@ -263,7 +263,8 @@ namespace WindowsFormsApp1
             "SKODA",
             "DACIA",
             "MERCEDES ",
-            "LAMBO"});
+            "LAMBO",
+            "VIZZA"});
             this.cmb_box_man_name.Location = new System.Drawing.Point(126, 184);
             this.cmb_box_man_name.Name = "cmb_box_man_name";
             this.cmb_box_man_name.Size = new System.Drawing.Size(140, 24);
