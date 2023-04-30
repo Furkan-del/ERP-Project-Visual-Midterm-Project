@@ -102,7 +102,7 @@ namespace WindowsFormsApp1
             this.btn_enter.Name = "btn_enter";
             this.btn_enter.Size = new System.Drawing.Size(156, 58);
             this.btn_enter.TabIndex = 3;
-            this.btn_enter.Text = "Enter";
+            this.btn_enter.Text = "&Enter";
             this.btn_enter.UseVisualStyleBackColor = true;
             this.btn_enter.Click += new System.EventHandler(this.btn_enter_Click_1);
             // 
@@ -114,7 +114,7 @@ namespace WindowsFormsApp1
             this.btn_cstmr.Name = "btn_cstmr";
             this.btn_cstmr.Size = new System.Drawing.Size(181, 58);
             this.btn_cstmr.TabIndex = 4;
-            this.btn_cstmr.Text = "Customer Main Page";
+            this.btn_cstmr.Text = "&Customer Main Page";
             this.btn_cstmr.UseVisualStyleBackColor = true;
             this.btn_cstmr.Click += new System.EventHandler(this.btn_cstmr_Click);
             // 

@@ -39,10 +39,10 @@ namespace WindowsFormsApp1
             this.button1 = new System.Windows.Forms.Button();
             this.btn_man_page = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.exitButton = new System.Windows.Forms.Button();
             this.btn_addProduct = new System.Windows.Forms.Button();
             this.btn_warehouse = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.exitButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -102,7 +102,7 @@ namespace WindowsFormsApp1
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(143, 42);
             this.button1.TabIndex = 6;
-            this.button1.Text = "Enter";
+            this.button1.Text = "&Enter";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -114,7 +114,7 @@ namespace WindowsFormsApp1
             this.btn_man_page.Name = "btn_man_page";
             this.btn_man_page.Size = new System.Drawing.Size(173, 54);
             this.btn_man_page.TabIndex = 7;
-            this.btn_man_page.Text = "Manufacturer Page";
+            this.btn_man_page.Text = "&Manufacturer Page";
             this.btn_man_page.UseVisualStyleBackColor = true;
             this.btn_man_page.Click += new System.EventHandler(this.btn_man_page_Click);
             // 
@@ -138,6 +138,18 @@ namespace WindowsFormsApp1
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Manufacturer Information";
             // 
+            // exitButton
+            // 
+            this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.exitButton.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.exitButton.Location = new System.Drawing.Point(195, 352);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(138, 46);
+            this.exitButton.TabIndex = 10;
+            this.exitButton.Text = "&EXIT";
+            this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
             // btn_addProduct
             // 
             this.btn_addProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -146,7 +158,7 @@ namespace WindowsFormsApp1
             this.btn_addProduct.Name = "btn_addProduct";
             this.btn_addProduct.Size = new System.Drawing.Size(140, 46);
             this.btn_addProduct.TabIndex = 9;
-            this.btn_addProduct.Text = "Add Product";
+            this.btn_addProduct.Text = "&Add Product";
             this.btn_addProduct.UseVisualStyleBackColor = true;
             this.btn_addProduct.Click += new System.EventHandler(this.btn_addProduct_Click);
             // 
@@ -158,21 +170,9 @@ namespace WindowsFormsApp1
             this.btn_warehouse.Name = "btn_warehouse";
             this.btn_warehouse.Size = new System.Drawing.Size(175, 54);
             this.btn_warehouse.TabIndex = 8;
-            this.btn_warehouse.Text = "Add Warehouse";
+            this.btn_warehouse.Text = "&Add Warehouse";
             this.btn_warehouse.UseVisualStyleBackColor = true;
             this.btn_warehouse.Click += new System.EventHandler(this.btn_warehouse_Click);
-            // 
-            // exitButton
-            // 
-            this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.exitButton.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.exitButton.Location = new System.Drawing.Point(195, 352);
-            this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(138, 46);
-            this.exitButton.TabIndex = 10;
-            this.exitButton.Text = "EXIT";
-            this.exitButton.UseVisualStyleBackColor = true;
-            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // ManufacturerInfoForm
             // 
@@ -181,7 +181,7 @@ namespace WindowsFormsApp1
             this.ClientSize = new System.Drawing.Size(817, 503);
             this.Controls.Add(this.groupBox1);
             this.Name = "ManufacturerInfoForm";
-            this.Text = "Form1";
+            this.Text = "ManufacturerInfoForm";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

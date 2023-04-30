@@ -17,9 +17,14 @@ namespace WindowsFormsApp1
         static String connString = "Data Source= DESKTOP-6NDRJ67\\MSSQLSERVER01;Initial Catalog=erpTIRSAN;Integrated Security=True";
         SqlConnection sqlConnection = new SqlConnection(connString);
         SqlCommand sqlCommand;
+        SqlDataReader sqlDataReader1;
+        int currentQuantity;
+        int requestedQuantity;
+
         public ManufacturerForm()
         {
             InitializeComponent();
+            sqlConnection.Open();
         }
 
         
@@ -30,22 +35,52 @@ namespace WindowsFormsApp1
         {
             try
             {
-                    sqlConnection.Open();
                 
-                    int value = int.Parse(txt_qty.Text);
-                 
+                string sqlQuery = "select * from products where name=@name";
+                SqlCommand sql = new SqlCommand(sqlQuery, sqlConnection);
+                sql.Parameters.AddWithValue("@name", txt_name.Text);
+                sqlDataReader1 = sql.ExecuteReader();
+
+                while (sqlDataReader1.Read())
+                {
+                    currentQuantity = int.Parse(sqlDataReader1["quantityOfProduct"].ToString());
+
+                    requestedQuantity = int.Parse(txt_qty.Text);
+                }
+                sqlDataReader1.Close();
+
+                if (requestedQuantity < currentQuantity)
+                {
                     string query = "UPDATE products SET quantityOfProduct = quantityOfProduct - @quantity WHERE name = @name";
                     sqlCommand = new SqlCommand(query, sqlConnection);
-                    sqlCommand.Parameters.AddWithValue("@quantity", value);
+                    sqlCommand.Parameters.AddWithValue("@quantity", requestedQuantity);
                     sqlCommand.Parameters.AddWithValue("@name", txt_name.Text);
                     sqlCommand.ExecuteNonQuery();
+                    MessageBox.Show("The Product is sending", "Succesfully!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    MessageBox.Show("The Product is sending","Succesfully!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else if (requestedQuantity > currentQuantity)
+                {
+                    MessageBox.Show(" Your product quantity is less than the requested one so You cant send it ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (requestedQuantity == currentQuantity && currentQuantity!=0)
+                {
+                    string query = "UPDATE products SET quantityOfProduct = quantityOfProduct - @quantity WHERE name = @name";
+                    sqlCommand = new SqlCommand(query, sqlConnection);
+                    sqlCommand.Parameters.AddWithValue("@quantity", requestedQuantity);
+                    sqlCommand.Parameters.AddWithValue("@name", txt_name.Text);
+                    sqlCommand.ExecuteNonQuery();
+                    MessageBox.Show("We dont have anymore this product ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                }
+                else
+                {
+                    MessageBox.Show("You cannot send this product", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                }
 
-                
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
-                MessageBox.Show("Product is not sended", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Product is not sended"+ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 
             }
 
@@ -56,7 +91,7 @@ namespace WindowsFormsApp1
             try
             {
                 
-                    sqlConnection.Open();
+                  
                     
                     string query= "select w.numberOfWarehouses,w.location,p.name,p.orderTime,p.price,p.quantityOfProduct from warehouses w ,products as p WHERE p.id = w.productId AND w.manufacturerID=(select id from manufacturerFactory where userId=@userId)";
                     SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
@@ -72,11 +107,7 @@ namespace WindowsFormsApp1
                     DataTable dt = new DataTable();
                     sqlDataAdapter.Fill(dt);
                     dataGridViewMsg.DataSource = dt;
-                    
-
-
-                
-
+      
             }catch(Exception ex)
             {
                 MessageBox.Show("Error ocurred during show warehouses"+ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -99,7 +130,7 @@ namespace WindowsFormsApp1
 
         private void man_name_Click(object sender, EventArgs e)
         {
-            sqlConnection.Open();
+        
             string query = "select * from manufacturerFactory where userId=@userId ";
 
             SqlCommand command = new SqlCommand(query, sqlConnection);

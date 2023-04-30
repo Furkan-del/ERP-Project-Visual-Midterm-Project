@@ -86,7 +86,7 @@ namespace WindowsFormsApp1
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(122, 39);
             this.btn_login.TabIndex = 2;
-            this.btn_login.Text = "Log In";
+            this.btn_login.Text = "&Log In";
             this.btn_login.UseVisualStyleBackColor = true;
             this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 

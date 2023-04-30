@@ -103,7 +103,7 @@ namespace WindowsFormsApp1
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(155, 48);
             this.btn_add.TabIndex = 6;
-            this.btn_add.Text = "Add Product";
+            this.btn_add.Text = "&Add Product";
             this.btn_add.UseVisualStyleBackColor = true;
             this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
@@ -133,7 +133,7 @@ namespace WindowsFormsApp1
             this.btn_back.Name = "btn_back";
             this.btn_back.Size = new System.Drawing.Size(142, 48);
             this.btn_back.TabIndex = 8;
-            this.btn_back.Text = "BACK";
+            this.btn_back.Text = "&BACK";
             this.btn_back.UseVisualStyleBackColor = true;
             this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
@@ -145,7 +145,7 @@ namespace WindowsFormsApp1
             this.btn_Main_Page.Name = "btn_Main_Page";
             this.btn_Main_Page.Size = new System.Drawing.Size(161, 48);
             this.btn_Main_Page.TabIndex = 7;
-            this.btn_Main_Page.Text = "Main Manufacturer Page";
+            this.btn_Main_Page.Text = "&Main Manufacturer Page";
             this.btn_Main_Page.UseVisualStyleBackColor = true;
             this.btn_Main_Page.Click += new System.EventHandler(this.btn_Main_Page_Click);
             // 
