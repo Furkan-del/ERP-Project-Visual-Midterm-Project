@@ -37,7 +37,7 @@ namespace WindowsFormsApp1
             try
             {
                     sqlConnection.Open();
-                    string query = "select id from manufacturerFactory where manufacturerName ='"+man_name_txt_box.Text+ "'";
+                    string query = "select id from manufacturerFactory where manufacturerName ='"+cmb_box_man_name.Text+ "'";
                     SqlCommand command = new SqlCommand(query, sqlConnection);
                     SqlDataReader sql1 = command.ExecuteReader();
                 if (sql1.Read())

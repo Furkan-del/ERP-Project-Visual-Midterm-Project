@@ -46,6 +46,7 @@ namespace WindowsFormsApp1
             this.log_lbl = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.txt_userName = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -171,11 +172,25 @@ namespace WindowsFormsApp1
             this.txt_userName.TabIndex = 0;
             this.toolTip1.SetToolTip(this.txt_userName, "username");
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.button1.Location = new System.Drawing.Point(386, 266);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(106, 41);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "&EXIT";
+            this.toolTip1.SetToolTip(this.button1, "Exit");
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(796, 406);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txt_userName);
             this.Controls.Add(this.log_lbl);
             this.Controls.Add(this.link_lbl);
@@ -216,5 +231,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label log_lbl;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.TextBox txt_userName;
+        private System.Windows.Forms.Button button1;
     }
 }

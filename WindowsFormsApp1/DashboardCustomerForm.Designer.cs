@@ -33,7 +33,6 @@ namespace WindowsFormsApp1
             this.label1 = new System.Windows.Forms.Label();
             this.btn_send = new System.Windows.Forms.Button();
             this.grpBox_customer = new System.Windows.Forms.GroupBox();
-            this.man_name_txt_box = new System.Windows.Forms.TextBox();
             this.to_man = new System.Windows.Forms.Label();
             this.txt_sender = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -54,6 +53,7 @@ namespace WindowsFormsApp1
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.cmb_box_man_name = new System.Windows.Forms.ComboBox();
             this.grpBox_customer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpTIRSANDataSetBindingSource)).BeginInit();
@@ -85,8 +85,8 @@ namespace WindowsFormsApp1
             // 
             // grpBox_customer
             // 
-            this.grpBox_customer.Controls.Add(this.man_name_txt_box);
             this.grpBox_customer.Controls.Add(this.to_man);
+            this.grpBox_customer.Controls.Add(this.cmb_box_man_name);
             this.grpBox_customer.Controls.Add(this.txt_sender);
             this.grpBox_customer.Controls.Add(this.label5);
             this.grpBox_customer.Controls.Add(this.txt_message);
@@ -98,14 +98,6 @@ namespace WindowsFormsApp1
             this.grpBox_customer.TabIndex = 16;
             this.grpBox_customer.TabStop = false;
             this.grpBox_customer.Text = "CustomerDashBoard";
-            // 
-            // man_name_txt_box
-            // 
-            this.man_name_txt_box.Location = new System.Drawing.Point(126, 167);
-            this.man_name_txt_box.Name = "man_name_txt_box";
-            this.man_name_txt_box.Size = new System.Drawing.Size(140, 22);
-            this.man_name_txt_box.TabIndex = 3;
-            this.toolTip1.SetToolTip(this.man_name_txt_box, "manufacturer Name");
             // 
             // to_man
             // 
@@ -206,9 +198,9 @@ namespace WindowsFormsApp1
             // menuStrip1
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Location = new System.Drawing.Point(0, 30);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 28);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(896, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(896, 24);
             this.menuStrip1.TabIndex = 18;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -221,7 +213,7 @@ namespace WindowsFormsApp1
             this.aboutToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(896, 30);
+            this.menuStrip2.Size = new System.Drawing.Size(896, 28);
             this.menuStrip2.TabIndex = 19;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -231,7 +223,7 @@ namespace WindowsFormsApp1
             this.cusname,
             this.location_men_itm});
             this.cus_menu_strip.Name = "cus_menu_strip";
-            this.cus_menu_strip.Size = new System.Drawing.Size(76, 26);
+            this.cus_menu_strip.Size = new System.Drawing.Size(76, 24);
             this.cus_menu_strip.Text = "Cus Info";
             this.cus_menu_strip.Click += new System.EventHandler(this.fileToolStripMenuItem_Click);
             // 
@@ -250,14 +242,33 @@ namespace WindowsFormsApp1
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(49, 26);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(49, 24);
             this.editToolStripMenuItem.Text = "Edit";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(64, 26);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
             this.aboutToolStripMenuItem.Text = "About";
+            // 
+            // cmb_box_man_name
+            // 
+            this.cmb_box_man_name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_box_man_name.FormattingEnabled = true;
+            this.cmb_box_man_name.Items.AddRange(new object[] {
+            "VESPA",
+            "PROTON",
+            "CITROEN",
+            "TATA",
+            "SKODA",
+            "DACIA",
+            "MERCEDES ",
+            "LAMBO"});
+            this.cmb_box_man_name.Location = new System.Drawing.Point(126, 184);
+            this.cmb_box_man_name.Name = "cmb_box_man_name";
+            this.cmb_box_man_name.Size = new System.Drawing.Size(140, 24);
+            this.cmb_box_man_name.TabIndex = 20;
+            this.toolTip1.SetToolTip(this.cmb_box_man_name, "manufacturer name");
             // 
             // DashboardCustomerForm
             // 
@@ -311,7 +322,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.TextBox man_name_txt_box;
         private System.Windows.Forms.Label to_man;
+        private System.Windows.Forms.ComboBox cmb_box_man_name;
     }
 }

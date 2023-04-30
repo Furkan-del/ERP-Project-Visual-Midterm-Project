@@ -87,13 +87,12 @@ namespace WindowsFormsApp1
                 {
                     MessageBox.Show("Username or Password is incorrect! ","Login Incorrect", MessageBoxButtons.OK,MessageBoxIcon.Error);
                 }
-            sqlConnection.Close();
-
-
-            
-            
+            sqlConnection.Close();    
         }
 
-       
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
