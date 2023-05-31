@@ -20,7 +20,6 @@ User Requirements For Visual Project
 •	Manufacturer updates the Database for quantity informations.
 •	Manufacturer can add product from manufacturer-side
 
-mrcnode donated 10000$ for project. thank you angel investor
 
 
 
