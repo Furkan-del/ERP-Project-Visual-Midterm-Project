@@ -16,6 +16,8 @@ namespace WindowsFormsApp1
 
         SqlCommand sqlCommand;
         public static int idMan;
+        public static int idCustomer;
+        public static string customerName;
         
         public DashboardCustomerForm()
         {
@@ -23,6 +25,7 @@ namespace WindowsFormsApp1
         }
         static String connString = "Data Source= DESKTOP-6NDRJ67\\MSSQLSERVER01;Initial Catalog=erpTIRSAN;Integrated Security=True";
         SqlConnection sqlConnection = new SqlConnection(connString);
+        
         
 
        
@@ -36,8 +39,8 @@ namespace WindowsFormsApp1
         {
             try
             {
-                    sqlConnection.Open();
-                    string query = "select id from manufacturerFactory where manufacturerName ='"+cmb_box_man_name.Text+ "'";
+                sqlConnection.Open();
+                string query = "select id from manufacturerFactory where manufacturerName ='"+cmb_box_man_name.Text+ "'";
                     SqlCommand command = new SqlCommand(query, sqlConnection);
                     SqlDataReader sql1 = command.ExecuteReader();
                 if (sql1.Read())
@@ -52,12 +55,14 @@ namespace WindowsFormsApp1
                 }
 
 
-                string save = "insert into logger(messagefromcustomer,senderOfMessage,userId,manufacturerId)VALUES(@msg,@sender,@userId,@manufacturerId)";
+                string save = "insert into logger(messagefromcustomer,senderOfMessage,userId,manufacturerId,customername)VALUES(@msg,@sender,@userId,@manufacturerId,@customerName)";
                     sqlCommand = new SqlCommand(save, sqlConnection);
+                    sqlCommand.Parameters.AddWithValue("@customername", LogInForm.cusName);
                     sqlCommand.Parameters.AddWithValue("@msg", txt_message.Text);
                     sqlCommand.Parameters.AddWithValue("@sender", txt_sender.Text);
                     sqlCommand.Parameters.AddWithValue("@userId", LogInForm.idOfCustomer);
                     sqlCommand.Parameters.AddWithValue("@manufacturerId", idMan);
+               
 
                     sqlCommand.ExecuteNonQuery();
                     int rowsAffected = sqlCommand.ExecuteNonQuery();
@@ -69,9 +74,7 @@ namespace WindowsFormsApp1
                     {
                         MessageBox.Show("Succes");
                     }
-                   
                     
-
                 
 
             }catch(Exception ex)
@@ -98,21 +101,33 @@ namespace WindowsFormsApp1
 
         }
 
-        private void fileToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+       
+
+        private void btn_cargo_Click(object sender, EventArgs e)
+         {
             sqlConnection.Open();
+
             string query = "select * from customerfactory where userId=@userId ";
 
-            SqlCommand command = new SqlCommand(query,sqlConnection);
+            SqlCommand command = new SqlCommand(query, sqlConnection);
             command.Parameters.AddWithValue("@userId", LogInForm.idOfCustomer);
             SqlDataReader sqlDataReader = command.ExecuteReader();
             while (sqlDataReader.Read())
             {
+                idCustomer = int.Parse(sqlDataReader["id"].ToString());
                 cusname.Text = sqlDataReader["customerName"].ToString();
+                customerName = cusname.Text;
                 location_men_itm.Text = sqlDataReader["addressOfFactory"].ToString();
 
             }
             sqlDataReader.Close();
+
+
+            var cargoForm = new Form1();
+            cargoForm.Show();
+            this.Close();
         }
+
+        
     }
 }

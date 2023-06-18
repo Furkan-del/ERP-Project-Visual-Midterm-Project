@@ -61,6 +61,12 @@ namespace WindowsFormsApp1
             this.location_men_itm = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportScreen_btn = new System.Windows.Forms.Button();
+            this.filterRequest = new System.Windows.Forms.Button();
+            this.warehouse = new System.Windows.Forms.Label();
+            this.btn_Ok = new System.Windows.Forms.Button();
+            this.btn_deny = new System.Windows.Forms.Button();
+            this.cmb_box_cus = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.loggerBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpTIRSANDataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpTIRSANDataSet1)).BeginInit();
@@ -78,43 +84,48 @@ namespace WindowsFormsApp1
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 102);
+            this.label1.Location = new System.Drawing.Point(26, 83);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 17);
+            this.label1.Size = new System.Drawing.Size(59, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome";
             // 
             // lbl_product
             // 
             this.lbl_product.AutoSize = true;
-            this.lbl_product.Location = new System.Drawing.Point(137, 18);
+            this.lbl_product.Location = new System.Drawing.Point(103, 15);
+            this.lbl_product.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_product.Name = "lbl_product";
-            this.lbl_product.Size = new System.Drawing.Size(102, 17);
+            this.lbl_product.Size = new System.Drawing.Size(89, 15);
             this.lbl_product.TabIndex = 1;
             this.lbl_product.Text = " Product Name";
             // 
             // txt_name
             // 
-            this.txt_name.Location = new System.Drawing.Point(252, 18);
+            this.txt_name.Location = new System.Drawing.Point(189, 15);
+            this.txt_name.Margin = new System.Windows.Forms.Padding(2);
             this.txt_name.Name = "txt_name";
-            this.txt_name.Size = new System.Drawing.Size(100, 22);
+            this.txt_name.Size = new System.Drawing.Size(76, 20);
             this.txt_name.TabIndex = 1;
             this.toolTip1.SetToolTip(this.txt_name, "product Name\r\n");
             // 
             // txt_qty
             // 
-            this.txt_qty.Location = new System.Drawing.Point(252, 72);
+            this.txt_qty.Location = new System.Drawing.Point(189, 58);
+            this.txt_qty.Margin = new System.Windows.Forms.Padding(2);
             this.txt_qty.Name = "txt_qty";
-            this.txt_qty.Size = new System.Drawing.Size(100, 22);
+            this.txt_qty.Size = new System.Drawing.Size(76, 20);
             this.txt_qty.TabIndex = 2;
             this.toolTip1.SetToolTip(this.txt_qty, "quantity");
             // 
             // lbl_qty
             // 
             this.lbl_qty.AutoSize = true;
-            this.lbl_qty.Location = new System.Drawing.Point(137, 75);
+            this.lbl_qty.Location = new System.Drawing.Point(103, 61);
+            this.lbl_qty.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_qty.Name = "lbl_qty";
-            this.lbl_qty.Size = new System.Drawing.Size(37, 17);
+            this.lbl_qty.Size = new System.Drawing.Size(30, 15);
             this.lbl_qty.TabIndex = 3;
             this.lbl_qty.Text = "QTY";
             // 
@@ -122,9 +133,10 @@ namespace WindowsFormsApp1
             // 
             this.btn_sendProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_sendProduct.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btn_sendProduct.Location = new System.Drawing.Point(338, 178);
+            this.btn_sendProduct.Location = new System.Drawing.Point(254, 145);
+            this.btn_sendProduct.Margin = new System.Windows.Forms.Padding(2);
             this.btn_sendProduct.Name = "btn_sendProduct";
-            this.btn_sendProduct.Size = new System.Drawing.Size(147, 38);
+            this.btn_sendProduct.Size = new System.Drawing.Size(110, 31);
             this.btn_sendProduct.TabIndex = 3;
             this.btn_sendProduct.Text = "&Send Product";
             this.btn_sendProduct.UseVisualStyleBackColor = true;
@@ -134,9 +146,10 @@ namespace WindowsFormsApp1
             // 
             this.btn_warehouses.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_warehouses.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btn_warehouses.Location = new System.Drawing.Point(720, 183);
+            this.btn_warehouses.Location = new System.Drawing.Point(540, 149);
+            this.btn_warehouses.Margin = new System.Windows.Forms.Padding(2);
             this.btn_warehouses.Name = "btn_warehouses";
-            this.btn_warehouses.Size = new System.Drawing.Size(162, 63);
+            this.btn_warehouses.Size = new System.Drawing.Size(122, 51);
             this.btn_warehouses.TabIndex = 5;
             this.btn_warehouses.Text = "&Stock Information";
             this.btn_warehouses.UseVisualStyleBackColor = true;
@@ -169,23 +182,26 @@ namespace WindowsFormsApp1
             // groupBox
             // 
             this.groupBox.Controls.Add(this.dataGridViewMsg);
-            this.groupBox.Location = new System.Drawing.Point(820, 426);
+            this.groupBox.Location = new System.Drawing.Point(599, 346);
+            this.groupBox.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox.Name = "groupBox";
-            this.groupBox.Size = new System.Drawing.Size(578, 173);
+            this.groupBox.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox.Size = new System.Drawing.Size(472, 155);
             this.groupBox.TabIndex = 13;
             this.groupBox.TabStop = false;
-            this.groupBox.Text = "Messages";
+            this.groupBox.Text = "Requests";
             // 
             // dataGridViewMsg
             // 
             this.dataGridViewMsg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewMsg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewMsg.Location = new System.Drawing.Point(3, 18);
+            this.dataGridViewMsg.Location = new System.Drawing.Point(4, 17);
+            this.dataGridViewMsg.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewMsg.Name = "dataGridViewMsg";
             this.dataGridViewMsg.RowHeadersWidth = 51;
             this.dataGridViewMsg.RowTemplate.Height = 24;
-            this.dataGridViewMsg.Size = new System.Drawing.Size(572, 152);
+            this.dataGridViewMsg.Size = new System.Drawing.Size(457, 124);
             this.dataGridViewMsg.TabIndex = 0;
+            this.dataGridViewMsg.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMsg_CellContentClick);
             // 
             // warehousesBindingSource
             // 
@@ -198,9 +214,11 @@ namespace WindowsFormsApp1
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.dataGridViewStock);
-            this.groupBox1.Location = new System.Drawing.Point(24, 426);
+            this.groupBox1.Location = new System.Drawing.Point(18, 346);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(749, 179);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(562, 145);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Stock";
@@ -209,11 +227,12 @@ namespace WindowsFormsApp1
             // 
             this.dataGridViewStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewStock.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewStock.Location = new System.Drawing.Point(3, 18);
+            this.dataGridViewStock.Location = new System.Drawing.Point(2, 15);
+            this.dataGridViewStock.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewStock.Name = "dataGridViewStock";
             this.dataGridViewStock.RowHeadersWidth = 51;
             this.dataGridViewStock.RowTemplate.Height = 24;
-            this.dataGridViewStock.Size = new System.Drawing.Size(743, 158);
+            this.dataGridViewStock.Size = new System.Drawing.Size(558, 128);
             this.dataGridViewStock.TabIndex = 0;
             // 
             // productswarehousesBindingSource
@@ -236,27 +255,31 @@ namespace WindowsFormsApp1
             this.grp_box_Send.Controls.Add(this.lbl_qty);
             this.grp_box_Send.Controls.Add(this.txt_qty);
             this.grp_box_Send.Controls.Add(this.btn_sendProduct);
-            this.grp_box_Send.Location = new System.Drawing.Point(52, 132);
+            this.grp_box_Send.Location = new System.Drawing.Point(39, 107);
+            this.grp_box_Send.Margin = new System.Windows.Forms.Padding(2);
             this.grp_box_Send.Name = "grp_box_Send";
-            this.grp_box_Send.Size = new System.Drawing.Size(567, 235);
+            this.grp_box_Send.Padding = new System.Windows.Forms.Padding(2);
+            this.grp_box_Send.Size = new System.Drawing.Size(425, 191);
             this.grp_box_Send.TabIndex = 17;
             this.grp_box_Send.TabStop = false;
             this.grp_box_Send.Text = "Send Product";
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(945, 85);
+            this.dateTimePicker1.Location = new System.Drawing.Point(9, 25);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(151, 20);
             this.dateTimePicker1.TabIndex = 18;
             // 
             // btn_exit
             // 
             this.btn_exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_exit.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btn_exit.Location = new System.Drawing.Point(720, 262);
+            this.btn_exit.Location = new System.Drawing.Point(540, 213);
+            this.btn_exit.Margin = new System.Windows.Forms.Padding(2);
             this.btn_exit.Name = "btn_exit";
-            this.btn_exit.Size = new System.Drawing.Size(162, 37);
+            this.btn_exit.Size = new System.Drawing.Size(122, 30);
             this.btn_exit.TabIndex = 6;
             this.btn_exit.Text = "&EXIT";
             this.btn_exit.UseVisualStyleBackColor = true;
@@ -266,10 +289,11 @@ namespace WindowsFormsApp1
             // 
             this.back_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.back_btn.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.back_btn.Location = new System.Drawing.Point(720, 321);
+            this.back_btn.Location = new System.Drawing.Point(540, 261);
+            this.back_btn.Margin = new System.Windows.Forms.Padding(2);
             this.back_btn.Name = "back_btn";
-            this.back_btn.Size = new System.Drawing.Size(162, 37);
-            this.back_btn.TabIndex = 19;
+            this.back_btn.Size = new System.Drawing.Size(122, 30);
+            this.back_btn.TabIndex = 4;
             this.back_btn.Text = "&BACK";
             this.back_btn.UseVisualStyleBackColor = true;
             this.back_btn.Click += new System.EventHandler(this.back_btn_Click);
@@ -283,7 +307,8 @@ namespace WindowsFormsApp1
             this.aboutToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(1428, 30);
+            this.menuStrip2.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip2.Size = new System.Drawing.Size(1071, 28);
             this.menuStrip2.TabIndex = 20;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -293,7 +318,7 @@ namespace WindowsFormsApp1
             this.manName_menu,
             this.location_men_itm});
             this.man_name.Name = "man_name";
-            this.man_name.Size = new System.Drawing.Size(141, 26);
+            this.man_name.Size = new System.Drawing.Size(141, 24);
             this.man_name.Text = "Manufacturer Info";
             this.man_name.Click += new System.EventHandler(this.man_name_Click);
             // 
@@ -312,20 +337,102 @@ namespace WindowsFormsApp1
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(49, 26);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(49, 24);
             this.editToolStripMenuItem.Text = "Edit";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(64, 26);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
             this.aboutToolStripMenuItem.Text = "About";
+            // 
+            // reportScreen_btn
+            // 
+            this.reportScreen_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.reportScreen_btn.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.reportScreen_btn.Location = new System.Drawing.Point(540, 83);
+            this.reportScreen_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.reportScreen_btn.Name = "reportScreen_btn";
+            this.reportScreen_btn.Size = new System.Drawing.Size(122, 51);
+            this.reportScreen_btn.TabIndex = 7;
+            this.reportScreen_btn.Text = "&Reporting Screen";
+            this.reportScreen_btn.UseVisualStyleBackColor = true;
+            this.reportScreen_btn.Click += new System.EventHandler(this.reportScreen_btn_Click);
+            // 
+            // filterRequest
+            // 
+            this.filterRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.filterRequest.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.filterRequest.Location = new System.Drawing.Point(846, 267);
+            this.filterRequest.Margin = new System.Windows.Forms.Padding(2);
+            this.filterRequest.Name = "filterRequest";
+            this.filterRequest.Size = new System.Drawing.Size(115, 31);
+            this.filterRequest.TabIndex = 8;
+            this.filterRequest.Text = "&See Request";
+            this.filterRequest.UseVisualStyleBackColor = true;
+            this.filterRequest.Click += new System.EventHandler(this.filterRequest_Click);
+            // 
+            // warehouse
+            // 
+            this.warehouse.AutoSize = true;
+            this.warehouse.Location = new System.Drawing.Point(708, 216);
+            this.warehouse.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.warehouse.Name = "warehouse";
+            this.warehouse.Size = new System.Drawing.Size(100, 15);
+            this.warehouse.TabIndex = 4;
+            this.warehouse.Text = "Customer Name:";
+            // 
+            // btn_Ok
+            // 
+            this.btn_Ok.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btn_Ok.Location = new System.Drawing.Point(760, 509);
+            this.btn_Ok.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Ok.Name = "btn_Ok";
+            this.btn_Ok.Size = new System.Drawing.Size(59, 23);
+            this.btn_Ok.TabIndex = 9;
+            this.btn_Ok.Text = "&OK";
+            this.btn_Ok.UseVisualStyleBackColor = true;
+            this.btn_Ok.Click += new System.EventHandler(this.btn_Ok_Click);
+            // 
+            // btn_deny
+            // 
+            this.btn_deny.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btn_deny.Location = new System.Drawing.Point(846, 509);
+            this.btn_deny.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_deny.Name = "btn_deny";
+            this.btn_deny.Size = new System.Drawing.Size(62, 23);
+            this.btn_deny.TabIndex = 8;
+            this.btn_deny.Text = "&DENY";
+            this.btn_deny.UseVisualStyleBackColor = true;
+            this.btn_deny.Click += new System.EventHandler(this.btn_deny_Click);
+            // 
+            // cmb_box_cus
+            // 
+            this.cmb_box_cus.FormattingEnabled = true;
+            this.cmb_box_cus.Items.AddRange(new object[] {
+            "BENTLEY",
+            "AXA",
+            "porsche",
+            "iveco",
+            "tata",
+            "KARSA",
+            "furkan"});
+            this.cmb_box_cus.Location = new System.Drawing.Point(846, 216);
+            this.cmb_box_cus.Name = "cmb_box_cus";
+            this.cmb_box_cus.Size = new System.Drawing.Size(121, 21);
+            this.cmb_box_cus.TabIndex = 21;
             // 
             // ManufacturerForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1428, 668);
+            this.ClientSize = new System.Drawing.Size(1071, 543);
+            this.Controls.Add(this.cmb_box_cus);
+            this.Controls.Add(this.btn_deny);
+            this.Controls.Add(this.btn_Ok);
+            this.Controls.Add(this.warehouse);
+            this.Controls.Add(this.filterRequest);
+            this.Controls.Add(this.reportScreen_btn);
             this.Controls.Add(this.menuStrip2);
             this.Controls.Add(this.back_btn);
             this.Controls.Add(this.btn_exit);
@@ -335,6 +442,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.groupBox);
             this.Controls.Add(this.btn_warehouses);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ManufacturerForm";
             this.Text = "Manufacturer";
             ((System.ComponentModel.ISupportInitialize)(this.loggerBindingSource1)).EndInit();
@@ -379,7 +487,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button btn_exit;
         private System.Windows.Forms.BindingSource loggerBindingSource1;
         private System.Windows.Forms.BindingSource erpTIRSANDataSet1BindingSource;
-        private System.Windows.Forms.DataGridView dataGridViewMsg;
         private System.Windows.Forms.DataGridView dataGridViewStock;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button back_btn;
@@ -389,5 +496,12 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.ToolStripMenuItem location_men_itm;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.Button reportScreen_btn;
+        private System.Windows.Forms.DataGridView dataGridViewMsg;
+        private System.Windows.Forms.Button filterRequest;
+        private System.Windows.Forms.Label warehouse;
+        private System.Windows.Forms.Button btn_Ok;
+        private System.Windows.Forms.Button btn_deny;
+        private System.Windows.Forms.ComboBox cmb_box_cus;
     }
 }

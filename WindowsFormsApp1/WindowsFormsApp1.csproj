@@ -89,6 +89,18 @@
     <Compile Include="AddProductForm.Designer.cs">
       <DependentUpon>AddProductForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CargoInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CargoInfoForm.Designer.cs">
+      <DependentUpon>CargoInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpeditionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExpeditionForm.Designer.cs">
+      <DependentUpon>ExpeditionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManufacturerInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +127,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportingScreenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportingScreenForm.Designer.cs">
+      <DependentUpon>ReportingScreenForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="WareHouseForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +147,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DashboardCustomerForm.resx">
       <DependentUpon>DashboardCustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CargoInfoForm.resx">
+      <DependentUpon>CargoInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpeditionForm.resx">
+      <DependentUpon>ExpeditionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManufacturerInfoForm.resx">
       <DependentUpon>ManufacturerInfoForm.cs</DependentUpon>
@@ -151,6 +175,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReportingScreenForm.resx">
+      <DependentUpon>ReportingScreenForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WareHouseForm.resx">
       <DependentUpon>WareHouseForm.cs</DependentUpon>
     </EmbeddedResource>

@@ -29,6 +29,10 @@ namespace WindowsFormsApp1
             this.Close();
         }
 
+
+
+
+
         private void btn_enter_Click_1(object sender, EventArgs e)
         {
             try

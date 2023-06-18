@@ -42,11 +42,15 @@ namespace WindowsFormsApp1
             this.txt_number_warehouse = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.warehouse_lbl = new System.Windows.Forms.Label();
+            this.warehouse_name_txt_box = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.warehouse_name_txt_box);
+            this.groupBox1.Controls.Add(this.warehouse_lbl);
             this.groupBox1.Controls.Add(this.lbl_man);
             this.groupBox1.Controls.Add(this.txt_man_name);
             this.groupBox1.Controls.Add(this.txt_p_name);
@@ -156,6 +160,23 @@ namespace WindowsFormsApp1
             this.label1.TabIndex = 0;
             this.label1.Text = "Number Of Warehouses";
             // 
+            // warehouse_lbl
+            // 
+            this.warehouse_lbl.AutoSize = true;
+            this.warehouse_lbl.Location = new System.Drawing.Point(6, 37);
+            this.warehouse_lbl.Name = "warehouse_lbl";
+            this.warehouse_lbl.Size = new System.Drawing.Size(128, 17);
+            this.warehouse_lbl.TabIndex = 10;
+            this.warehouse_lbl.Text = "WareHouse Name:";
+            // 
+            // warehouse_name_txt_box
+            // 
+            this.warehouse_name_txt_box.Location = new System.Drawing.Point(190, 32);
+            this.warehouse_name_txt_box.Name = "warehouse_name_txt_box";
+            this.warehouse_name_txt_box.Size = new System.Drawing.Size(121, 22);
+            this.warehouse_name_txt_box.TabIndex = 11;
+            this.toolTip1.SetToolTip(this.warehouse_name_txt_box, "nameOfWarehouse");
+            // 
             // WareHouseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -184,5 +205,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label lbl_man;
         private System.Windows.Forms.TextBox txt_man_name;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.TextBox warehouse_name_txt_box;
+        private System.Windows.Forms.Label warehouse_lbl;
     }
 }

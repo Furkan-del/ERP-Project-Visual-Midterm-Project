@@ -70,8 +70,9 @@ namespace WindowsFormsApp1
             try
             {
 
-                String save = "insert into warehouses(manufacturerId,numberOfWarehouses,location,productId)VALUES(@manId,@number,@loc,@prodId)";
+                String save = "insert into warehouses(manufacturerId,numberOfWarehouses,location,productId,name)VALUES(@manId,@number,@loc,@prodId,@name)";
                 sqlCommand = new SqlCommand(save, sqlConnection);
+                sqlCommand.Parameters.AddWithValue("@name", warehouse_name_txt_box.Text);
                 sqlCommand.Parameters.AddWithValue("@manId", idOfManufacturer);
                 sqlCommand.Parameters.AddWithValue("@number", int.Parse(txt_number_warehouse.Text));
                 sqlCommand.Parameters.AddWithValue("@loc", txtboloc.Text);

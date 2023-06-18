@@ -20,6 +20,7 @@ namespace WindowsFormsApp1
         SqlDataReader sqlDataReader1;
         int currentQuantity;
         int requestedQuantity;
+        public static int order_id;
 
         public ManufacturerForm()
         {
@@ -89,10 +90,7 @@ namespace WindowsFormsApp1
         private void btn_warehouses_Click(object sender, EventArgs e)
         {
             try
-            {
-                
-                  
-                    
+            {    
                     string query= "select w.numberOfWarehouses,w.location,p.name,p.orderTime,p.price,p.quantityOfProduct from warehouses w ,products as p WHERE p.id = w.productId AND w.manufacturerID=(select id from manufacturerFactory where userId=@userId)";
                     SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
                     sqlCommand.Parameters.AddWithValue("@userId", LogInForm.idOfManufacturer);
@@ -101,13 +99,7 @@ namespace WindowsFormsApp1
                     sqlData.Fill(dataTable);
                     dataGridViewStock.DataSource = dataTable;
 
-                    SqlCommand sql = new SqlCommand("select  senderOfMessage,messagefromcustomer from logger where manufacturerId=(SELECT id from manufacturerFactory  where userId=@userId)", sqlConnection);
-                    sql.Parameters.AddWithValue("@userId", LogInForm.idOfManufacturer);
-                    SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sql);
-                    DataTable dt = new DataTable();
-                    sqlDataAdapter.Fill(dt);
-                    dataGridViewMsg.DataSource = dt;
-      
+            
             }catch(Exception ex)
             {
                 MessageBox.Show("Error ocurred during show warehouses"+ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -131,7 +123,7 @@ namespace WindowsFormsApp1
         private void man_name_Click(object sender, EventArgs e)
         {
         
-            string query = "select * from manufacturerFactory where userId=@userId ";
+            string query = "select * from manufacturerFactory where userId=@userId";
 
             SqlCommand command = new SqlCommand(query, sqlConnection);
             command.Parameters.AddWithValue("@userId", LogInForm.idOfManufacturer);
@@ -144,6 +136,50 @@ namespace WindowsFormsApp1
             }
             sqlDataReader.Close();
             
+        }
+
+        private void reportScreen_btn_Click(object sender, EventArgs e)
+        {
+            var reporting = new ReportingScreenForm();
+            reporting.Show();
+            this.Close();
+        }
+
+        private void dataGridViewMsg_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            MessageBox.Show("Request is approved ", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        private void filterRequest_Click(object sender, EventArgs e)
+        {
+
+            String query = "select * from logger where customername="+cmb_box_cus.Text +" ";
+            SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+            SqlDataAdapter sqlData = new SqlDataAdapter(sqlCommand);
+            DataTable dataTable = new DataTable();
+            sqlData.Fill(dataTable);
+            dataGridViewMsg.DataSource = dataTable;
+
+        }
+
+        private void btn_Ok_Click(object sender, EventArgs e)
+        {
+
+            // buraya datagridview.cells olayı gelicek
+            int idValue = int.Parse(dataGridViewMsg.Rows[dataGridViewMsg.CurrentRow.Index].Cells["id"].Value.ToString());
+            order_id = idValue;
+
+
+
+            var expeditionForm = new ExpeditionForm();
+            expeditionForm.Show();
+            this.Close();
+        }
+
+        private void btn_deny_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Info", "Request are not accepted", MessageBoxButtons.OK, MessageBoxIcon.None);
         }
     }
 }
