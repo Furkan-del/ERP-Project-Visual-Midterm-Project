@@ -25,13 +25,14 @@ namespace WindowsFormsApp1
         public ExpeditionForm()
         {
             InitializeComponent();
+            sqlConnection.Open();
         }
 
         private void edit_btn_Click(object sender, EventArgs e)
         {
             try
             {
-                sqlConnection.Open();
+               
 
 
 
@@ -70,7 +71,7 @@ namespace WindowsFormsApp1
                 sqlCommand.ExecuteNonQuery();
                 MessageBox.Show("Expedition Infos are correctly added", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                
+
 
             }
             catch (Exception exception )
@@ -80,6 +81,14 @@ namespace WindowsFormsApp1
             }
  
 
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+
+            var manufacturerForm = new ManufacturerForm();
+            manufacturerForm.Show();
+            this.Close();
         }
     }
 }

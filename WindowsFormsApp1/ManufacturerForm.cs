@@ -132,7 +132,6 @@ namespace WindowsFormsApp1
             {
                 manName_menu.Text = sqlDataReader["manufacturerName"].ToString();
                 location_men_itm.Text = sqlDataReader["addressOfFactory"].ToString();
-
             }
             sqlDataReader.Close();
             
@@ -153,22 +152,47 @@ namespace WindowsFormsApp1
 
         private void filterRequest_Click(object sender, EventArgs e)
         {
+            try
+            {
+                String query = "select * from logger where customername=@cusName ";
+                SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+                sqlCommand.Parameters.AddWithValue("@cusName", cmb_box_cus.Text);
+                SqlDataAdapter sqlData = new SqlDataAdapter(sqlCommand);
+                DataTable dataTable = new DataTable();
+                sqlData.Fill(dataTable);
+                dataGridViewMsg.DataSource = dataTable;
 
-            String query = "select * from logger where customername="+cmb_box_cus.Text +" ";
-            SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
-            SqlDataAdapter sqlData = new SqlDataAdapter(sqlCommand);
-            DataTable dataTable = new DataTable();
-            sqlData.Fill(dataTable);
-            dataGridViewMsg.DataSource = dataTable;
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Error", ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
 
         }
 
         private void btn_Ok_Click(object sender, EventArgs e)
         {
+            try
+            {
 
-            // buraya datagridview.cells olayı gelicek
-            int idValue = int.Parse(dataGridViewMsg.Rows[dataGridViewMsg.CurrentRow.Index].Cells["id"].Value.ToString());
-            order_id = idValue;
+                SqlCommand sqlCommand;
+                SqlDataAdapter sqlDataAdapter;
+                string query = "delete from  logger where id=@logger_id; ";
+
+                int idValue = int.Parse(dataGridViewMsg.Rows[dataGridViewMsg.CurrentRow.Index].Cells["id"].Value.ToString());
+                order_id = idValue;
+                sqlCommand = new SqlCommand(query, sqlConnection);
+                sqlCommand.Parameters.AddWithValue("@logger_id", idValue);
+                sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                DataTable dt = new DataTable();
+                sqlDataAdapter.Fill(dt);
+                dataGridViewMsg.DataSource = dt;
+
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Error", ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
 
 
 
@@ -179,7 +203,28 @@ namespace WindowsFormsApp1
 
         private void btn_deny_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Info", "Request are not accepted", MessageBoxButtons.OK, MessageBoxIcon.None);
+            try
+            {
+                SqlCommand sqlCommand;
+
+                int idValue = int.Parse(dataGridViewMsg.Rows[dataGridViewMsg.CurrentRow.Index].Cells["id"].Value.ToString());
+                string query = "delete from  logger where id=@logger_id";
+                sqlCommand = new SqlCommand(query, sqlConnection);
+                sqlCommand.Parameters.AddWithValue("@logger_id", idValue);
+                MessageBox.Show("Request are not accepted and deleted ", "Information", MessageBoxButtons.OK, MessageBoxIcon.None);
+                SqlDataAdapter sqlDataAdapter;
+                sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                DataTable dt = new DataTable();
+                sqlDataAdapter.Fill(dt);
+                dataGridViewMsg.DataSource = dt;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error", ex.Message, MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+            
         }
+
+       
     }
 }

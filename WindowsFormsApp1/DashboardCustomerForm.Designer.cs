@@ -33,10 +33,8 @@ namespace WindowsFormsApp1
             this.label1 = new System.Windows.Forms.Label();
             this.btn_send = new System.Windows.Forms.Button();
             this.grpBox_customer = new System.Windows.Forms.GroupBox();
-            this.comboBoxWarehouseName = new System.Windows.Forms.ComboBox();
+            this.cmb_bx_man_name = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.to_man = new System.Windows.Forms.Label();
-            this.cmb_box_man_name = new System.Windows.Forms.ComboBox();
             this.txt_sender = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_message = new System.Windows.Forms.TextBox();
@@ -52,7 +50,6 @@ namespace WindowsFormsApp1
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.cus_menu_strip = new System.Windows.Forms.ToolStripMenuItem();
             this.cusname = new System.Windows.Forms.ToolStripMenuItem();
-            this.location_men_itm = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
@@ -68,10 +65,9 @@ namespace WindowsFormsApp1
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 29);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(8, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 15);
+            this.label1.Size = new System.Drawing.Size(66, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome";
             // 
@@ -79,10 +75,10 @@ namespace WindowsFormsApp1
             // 
             this.btn_send.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_send.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btn_send.Location = new System.Drawing.Point(94, 242);
-            this.btn_send.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_send.Location = new System.Drawing.Point(125, 298);
+            this.btn_send.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_send.Name = "btn_send";
-            this.btn_send.Size = new System.Drawing.Size(110, 35);
+            this.btn_send.Size = new System.Drawing.Size(147, 43);
             this.btn_send.TabIndex = 0;
             this.btn_send.Text = "&Send  Request";
             this.btn_send.UseVisualStyleBackColor = true;
@@ -90,122 +86,88 @@ namespace WindowsFormsApp1
             // 
             // grpBox_customer
             // 
-            this.grpBox_customer.Controls.Add(this.comboBoxWarehouseName);
+            this.grpBox_customer.Controls.Add(this.cmb_bx_man_name);
             this.grpBox_customer.Controls.Add(this.label3);
-            this.grpBox_customer.Controls.Add(this.to_man);
-            this.grpBox_customer.Controls.Add(this.cmb_box_man_name);
             this.grpBox_customer.Controls.Add(this.btn_send);
             this.grpBox_customer.Controls.Add(this.txt_sender);
             this.grpBox_customer.Controls.Add(this.label5);
             this.grpBox_customer.Controls.Add(this.txt_message);
             this.grpBox_customer.Controls.Add(this.label2);
             this.grpBox_customer.Controls.Add(this.label1);
-            this.grpBox_customer.Location = new System.Drawing.Point(18, 35);
-            this.grpBox_customer.Margin = new System.Windows.Forms.Padding(2);
+            this.grpBox_customer.Location = new System.Drawing.Point(24, 43);
+            this.grpBox_customer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grpBox_customer.Name = "grpBox_customer";
-            this.grpBox_customer.Padding = new System.Windows.Forms.Padding(2);
-            this.grpBox_customer.Size = new System.Drawing.Size(227, 304);
+            this.grpBox_customer.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grpBox_customer.Size = new System.Drawing.Size(303, 374);
             this.grpBox_customer.TabIndex = 16;
             this.grpBox_customer.TabStop = false;
             this.grpBox_customer.Text = "CustomerDashBoard";
             // 
-            // comboBoxWarehouseName
+            // cmb_bx_man_name
             // 
-            this.comboBoxWarehouseName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxWarehouseName.FormattingEnabled = true;
-            this.comboBoxWarehouseName.Items.AddRange(new object[] {
+            this.cmb_bx_man_name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_bx_man_name.FormattingEnabled = true;
+            this.cmb_bx_man_name.Items.AddRange(new object[] {
             "VESPA",
+            "VIZZA",
             "PROTON",
-            "CITROEN",
-            "TATA",
-            "SKODA",
-            "DACIA",
-            "MERCEDES ",
+            "SKODA ",
             "LAMBO",
-            "VIZZA"});
-            this.comboBoxWarehouseName.Location = new System.Drawing.Point(98, 198);
-            this.comboBoxWarehouseName.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxWarehouseName.Name = "comboBoxWarehouseName";
-            this.comboBoxWarehouseName.Size = new System.Drawing.Size(106, 21);
-            this.comboBoxWarehouseName.TabIndex = 28;
-            this.toolTip1.SetToolTip(this.comboBoxWarehouseName, "manufacturer name");
+            "TATA",
+            "TIRSAN",
+            "CITROEN",
+            "DACIA",
+            "MERCEDES"});
+            this.cmb_bx_man_name.Location = new System.Drawing.Point(125, 190);
+            this.cmb_bx_man_name.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmb_bx_man_name.Name = "cmb_bx_man_name";
+            this.cmb_bx_man_name.Size = new System.Drawing.Size(140, 24);
+            this.cmb_bx_man_name.TabIndex = 28;
+            this.toolTip1.SetToolTip(this.cmb_bx_man_name, "manufacturer name");
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(-7, 201);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(13, 191);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 15);
+            this.label3.Size = new System.Drawing.Size(85, 18);
             this.label3.TabIndex = 27;
-            this.label3.Text = "WarehouseName:";
-            // 
-            // to_man
-            // 
-            this.to_man.AutoSize = true;
-            this.to_man.Location = new System.Drawing.Point(10, 150);
-            this.to_man.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.to_man.Name = "to_man";
-            this.to_man.Size = new System.Drawing.Size(24, 15);
-            this.to_man.TabIndex = 25;
-            this.to_man.Text = "To:";
-            // 
-            // cmb_box_man_name
-            // 
-            this.cmb_box_man_name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmb_box_man_name.FormattingEnabled = true;
-            this.cmb_box_man_name.Items.AddRange(new object[] {
-            "VESPA",
-            "PROTON",
-            "CITROEN",
-            "TATA",
-            "SKODA",
-            "DACIA",
-            "MERCEDES ",
-            "LAMBO",
-            "VIZZA"});
-            this.cmb_box_man_name.Location = new System.Drawing.Point(98, 147);
-            this.cmb_box_man_name.Margin = new System.Windows.Forms.Padding(2);
-            this.cmb_box_man_name.Name = "cmb_box_man_name";
-            this.cmb_box_man_name.Size = new System.Drawing.Size(106, 21);
-            this.cmb_box_man_name.TabIndex = 20;
-            this.toolTip1.SetToolTip(this.cmb_box_man_name, "manufacturer name");
+            this.label3.Text = "Man. Name";
             // 
             // txt_sender
             // 
-            this.txt_sender.Location = new System.Drawing.Point(98, 106);
-            this.txt_sender.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_sender.Location = new System.Drawing.Point(131, 130);
+            this.txt_sender.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_sender.Name = "txt_sender";
-            this.txt_sender.Size = new System.Drawing.Size(106, 20);
+            this.txt_sender.Size = new System.Drawing.Size(140, 22);
             this.txt_sender.TabIndex = 2;
             this.toolTip1.SetToolTip(this.txt_sender, "sender name");
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(10, 106);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(13, 130);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 15);
+            this.label5.Size = new System.Drawing.Size(95, 17);
             this.label5.TabIndex = 24;
             this.label5.Text = "Sender Name";
             // 
             // txt_message
             // 
-            this.txt_message.Location = new System.Drawing.Point(98, 65);
-            this.txt_message.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_message.Location = new System.Drawing.Point(131, 80);
+            this.txt_message.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_message.Name = "txt_message";
-            this.txt_message.Size = new System.Drawing.Size(106, 20);
+            this.txt_message.Size = new System.Drawing.Size(140, 22);
             this.txt_message.TabIndex = 1;
             this.toolTip1.SetToolTip(this.txt_message, "requests");
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 68);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(13, 84);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 15);
+            this.label2.Size = new System.Drawing.Size(68, 17);
             this.label2.TabIndex = 22;
             this.label2.Text = "Requests";
             // 
@@ -232,10 +194,10 @@ namespace WindowsFormsApp1
             // 
             this.btn_list.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_list.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btn_list.Location = new System.Drawing.Point(266, 103);
-            this.btn_list.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_list.Location = new System.Drawing.Point(355, 127);
+            this.btn_list.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_list.Name = "btn_list";
-            this.btn_list.Size = new System.Drawing.Size(107, 39);
+            this.btn_list.Size = new System.Drawing.Size(143, 48);
             this.btn_list.TabIndex = 4;
             this.btn_list.Text = "&List All Products";
             this.btn_list.UseVisualStyleBackColor = true;
@@ -245,10 +207,10 @@ namespace WindowsFormsApp1
             // 
             this.btn_exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_exit.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btn_exit.Location = new System.Drawing.Point(529, 103);
-            this.btn_exit.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_exit.Location = new System.Drawing.Point(705, 127);
+            this.btn_exit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_exit.Name = "btn_exit";
-            this.btn_exit.Size = new System.Drawing.Size(106, 39);
+            this.btn_exit.Size = new System.Drawing.Size(141, 48);
             this.btn_exit.TabIndex = 5;
             this.btn_exit.Text = "&EXIT";
             this.btn_exit.UseVisualStyleBackColor = true;
@@ -257,12 +219,12 @@ namespace WindowsFormsApp1
             // dataGridViewCustomer
             // 
             this.dataGridViewCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCustomer.Location = new System.Drawing.Point(266, 244);
-            this.dataGridViewCustomer.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridViewCustomer.Location = new System.Drawing.Point(355, 300);
+            this.dataGridViewCustomer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewCustomer.Name = "dataGridViewCustomer";
             this.dataGridViewCustomer.RowHeadersWidth = 51;
             this.dataGridViewCustomer.RowTemplate.Height = 24;
-            this.dataGridViewCustomer.Size = new System.Drawing.Size(394, 122);
+            this.dataGridViewCustomer.Size = new System.Drawing.Size(525, 150);
             this.dataGridViewCustomer.TabIndex = 17;
             // 
             // menuStrip1
@@ -270,8 +232,8 @@ namespace WindowsFormsApp1
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Location = new System.Drawing.Point(0, 28);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(672, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(896, 24);
             this.menuStrip1.TabIndex = 18;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -284,31 +246,25 @@ namespace WindowsFormsApp1
             this.aboutToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip2.Size = new System.Drawing.Size(672, 28);
+            this.menuStrip2.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip2.Size = new System.Drawing.Size(896, 28);
             this.menuStrip2.TabIndex = 19;
             this.menuStrip2.Text = "menuStrip2";
             // 
             // cus_menu_strip
             // 
             this.cus_menu_strip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cusname,
-            this.location_men_itm});
+            this.cusname});
             this.cus_menu_strip.Name = "cus_menu_strip";
             this.cus_menu_strip.Size = new System.Drawing.Size(76, 24);
             this.cus_menu_strip.Text = "Cus Info";
+            this.cus_menu_strip.Click += new System.EventHandler(this.cus_menu_strip_Click);
             // 
             // cusname
             // 
             this.cusname.Name = "cusname";
-            this.cusname.Size = new System.Drawing.Size(154, 26);
+            this.cusname.Size = new System.Drawing.Size(224, 26);
             this.cusname.Text = "cus name";
-            // 
-            // location_men_itm
-            // 
-            this.location_men_itm.Name = "location_men_itm";
-            this.location_men_itm.Size = new System.Drawing.Size(154, 26);
-            this.location_men_itm.Text = "details";
             // 
             // editToolStripMenuItem
             // 
@@ -326,10 +282,10 @@ namespace WindowsFormsApp1
             // 
             this.btn_cargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_cargo.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btn_cargo.Location = new System.Drawing.Point(394, 103);
-            this.btn_cargo.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_cargo.Location = new System.Drawing.Point(525, 127);
+            this.btn_cargo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_cargo.Name = "btn_cargo";
-            this.btn_cargo.Size = new System.Drawing.Size(112, 39);
+            this.btn_cargo.Size = new System.Drawing.Size(149, 48);
             this.btn_cargo.TabIndex = 6;
             this.btn_cargo.Text = "&CargoInfo";
             this.btn_cargo.UseVisualStyleBackColor = true;
@@ -337,9 +293,9 @@ namespace WindowsFormsApp1
             // 
             // DashboardCustomerForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(672, 437);
+            this.ClientSize = new System.Drawing.Size(896, 538);
             this.Controls.Add(this.btn_cargo);
             this.Controls.Add(this.dataGridViewCustomer);
             this.Controls.Add(this.btn_exit);
@@ -348,7 +304,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menuStrip2);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "DashboardCustomerForm";
             this.Text = " ";
             this.grpBox_customer.ResumeLayout(false);
@@ -384,13 +340,10 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem cus_menu_strip;
         private System.Windows.Forms.ToolStripMenuItem cusname;
-        private System.Windows.Forms.ToolStripMenuItem location_men_itm;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.Label to_man;
-        private System.Windows.Forms.ComboBox cmb_box_man_name;
-        private System.Windows.Forms.ComboBox comboBoxWarehouseName;
+        private System.Windows.Forms.ComboBox cmb_bx_man_name;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_cargo;
     }

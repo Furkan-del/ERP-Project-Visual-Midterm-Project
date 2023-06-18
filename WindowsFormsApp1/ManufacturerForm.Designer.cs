@@ -87,7 +87,7 @@ namespace WindowsFormsApp1
             this.label1.Location = new System.Drawing.Point(26, 83);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 15);
+            this.label1.Size = new System.Drawing.Size(52, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome";
             // 
@@ -97,7 +97,7 @@ namespace WindowsFormsApp1
             this.lbl_product.Location = new System.Drawing.Point(103, 15);
             this.lbl_product.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_product.Name = "lbl_product";
-            this.lbl_product.Size = new System.Drawing.Size(89, 15);
+            this.lbl_product.Size = new System.Drawing.Size(78, 13);
             this.lbl_product.TabIndex = 1;
             this.lbl_product.Text = " Product Name";
             // 
@@ -125,7 +125,7 @@ namespace WindowsFormsApp1
             this.lbl_qty.Location = new System.Drawing.Point(103, 61);
             this.lbl_qty.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_qty.Name = "lbl_qty";
-            this.lbl_qty.Size = new System.Drawing.Size(30, 15);
+            this.lbl_qty.Size = new System.Drawing.Size(29, 13);
             this.lbl_qty.TabIndex = 3;
             this.lbl_qty.Text = "QTY";
             // 
@@ -308,7 +308,7 @@ namespace WindowsFormsApp1
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip2.Size = new System.Drawing.Size(1071, 28);
+            this.menuStrip2.Size = new System.Drawing.Size(1071, 24);
             this.menuStrip2.TabIndex = 20;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -318,32 +318,32 @@ namespace WindowsFormsApp1
             this.manName_menu,
             this.location_men_itm});
             this.man_name.Name = "man_name";
-            this.man_name.Size = new System.Drawing.Size(141, 24);
+            this.man_name.Size = new System.Drawing.Size(115, 20);
             this.man_name.Text = "Manufacturer Info";
             this.man_name.Click += new System.EventHandler(this.man_name_Click);
             // 
             // manName_menu
             // 
             this.manName_menu.Name = "manName_menu";
-            this.manName_menu.Size = new System.Drawing.Size(154, 26);
+            this.manName_menu.Size = new System.Drawing.Size(180, 22);
             this.manName_menu.Text = "cus name";
             // 
             // location_men_itm
             // 
             this.location_men_itm.Name = "location_men_itm";
-            this.location_men_itm.Size = new System.Drawing.Size(154, 26);
+            this.location_men_itm.Size = new System.Drawing.Size(180, 22);
             this.location_men_itm.Text = "details";
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(49, 24);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
             this.editToolStripMenuItem.Text = "Edit";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.aboutToolStripMenuItem.Text = "About";
             // 
             // reportScreen_btn
@@ -378,7 +378,7 @@ namespace WindowsFormsApp1
             this.warehouse.Location = new System.Drawing.Point(708, 216);
             this.warehouse.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.warehouse.Name = "warehouse";
-            this.warehouse.Size = new System.Drawing.Size(100, 15);
+            this.warehouse.Size = new System.Drawing.Size(85, 13);
             this.warehouse.TabIndex = 4;
             this.warehouse.Text = "Customer Name:";
             // 

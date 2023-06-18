@@ -28,7 +28,7 @@ namespace WindowsFormsApp1
 
             try
             {
-                string query = "select  actualDepartureDate,cargoParcelAmount,estimatedArrivalDate,warehousename,quantityOfProduct from expedition_infos where warehousename = @warehouseName ";
+                string query = "select productName,warehousename,confirmationDeliver,quantityOfProduct,actualDepartureDate,cargoParcelAmount,estimatedArrivalDate,warehousename,quantityOfProduct from expedition_infos where warehousename = @warehouseName ";
                 sqlCommand = new SqlCommand(query, sqlConnection);
                 sqlCommand.Parameters.AddWithValue("@warehouseName", filter_txt_box.Text);
                 sqlDataAdapter = new SqlDataAdapter(sqlCommand);
@@ -46,18 +46,19 @@ namespace WindowsFormsApp1
         {
             try
             {
-                SqlCommand sql;
-            string queryy = "select warehousename,dateOfOrder,confirmationDeliver,productName,cargoParcelAmount,warehousename,quantityOfProduct from expedition_infos where actualArrivalDate BETWEEN @baslangic AND @bitis ";
+            SqlCommand sql;
+            string queryy = "select warehousename,dateOfOrder,confirmationDeliver,productName,cargoParcelAmount,warehousename,quantityOfProduct from expedition_infos where actualArrivalDate BETWEEN  @baslangic AND @bitis ";
             sql = new SqlCommand(queryy, sqlConnection);
-            sql.Parameters.AddWithValue("@baslangic", date_time_begin.Value);
-            sql.Parameters.AddWithValue("@bitis", date_time_deliver.Value);
+            sql.Parameters.AddWithValue("@baslangic", date_time_begin.Value.ToString("yyyy-MM-dd"));
+            sql.Parameters.AddWithValue("@bitis", DateTime.Now.ToString("yyyy-MM-dd"));
+            SqlDataAdapter sqlData = new SqlDataAdapter(sql);
             DataTable dt = new DataTable();
-            sqlDataAdapter.Fill(dt);
+            sqlData.Fill(dt);
             report_data_view.DataSource = dt;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error", ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
 
         }
@@ -69,11 +70,13 @@ namespace WindowsFormsApp1
                 SqlCommand sql;
                 string queryy = "select warehousename,dateOfOrder,confirmationDeliver,productName,cargoParcelAmount,warehousename,quantityOfProduct from expedition_infos where actualArrivalDate BETWEEN @baslangic AND @bitis AND warehousename=@warehouseName  ";
                 sql = new SqlCommand(queryy, sqlConnection);
-                sql.Parameters.AddWithValue("@baslangic", date_time_begin.Value);
-                sql.Parameters.AddWithValue("@bitis", date_time_deliver.Value);
+
+                sql.Parameters.AddWithValue("@baslangic", date_time_begin.Value.ToString("yyyy-MM-dd HH:mm:ss"));
+                sql.Parameters.AddWithValue("@bitis", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                 sql.Parameters.AddWithValue("@warehouseName", filter_txt_box.Text);
+                SqlDataAdapter sqlData = new SqlDataAdapter(sql);
                 DataTable dt = new DataTable();
-                sqlDataAdapter.Fill(dt);
+                sqlData.Fill(dt);
                 report_data_view.DataSource = dt;
 
             }catch(Exception ex)
@@ -81,6 +84,15 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Error", ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
 
+
+        }
+
+        
+        private void back_btn_Click_1(object sender, EventArgs e)
+        {
+            var manForm = new ManufacturerForm();
+            manForm.Show();
+            this.Close();
 
         }
     }

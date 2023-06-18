@@ -18,14 +18,16 @@ namespace WindowsFormsApp1
         public static int idMan;
         public static int idCustomer;
         public static string customerName;
-        
+
+        static String connString = "Data Source= DESKTOP-6NDRJ67\\MSSQLSERVER01;Initial Catalog=erpTIRSAN;Integrated Security=True";
+        SqlConnection sqlConnection = new SqlConnection(connString);
+
         public DashboardCustomerForm()
         {
             InitializeComponent();
+            sqlConnection.Open();
         }
-        static String connString = "Data Source= DESKTOP-6NDRJ67\\MSSQLSERVER01;Initial Catalog=erpTIRSAN;Integrated Security=True";
-        SqlConnection sqlConnection = new SqlConnection(connString);
-        
+       
         
 
        
@@ -39,8 +41,8 @@ namespace WindowsFormsApp1
         {
             try
             {
-                sqlConnection.Open();
-                string query = "select id from manufacturerFactory where manufacturerName ='"+cmb_box_man_name.Text+ "'";
+                
+                string query = "select id from manufacturerFactory where manufacturerName ='"+cmb_bx_man_name.Text + "'";
                     SqlCommand command = new SqlCommand(query, sqlConnection);
                     SqlDataReader sql1 = command.ExecuteReader();
                 if (sql1.Read())
@@ -105,7 +107,7 @@ namespace WindowsFormsApp1
 
         private void btn_cargo_Click(object sender, EventArgs e)
          {
-            sqlConnection.Open();
+          
 
             string query = "select * from customerfactory where userId=@userId ";
 
@@ -128,6 +130,18 @@ namespace WindowsFormsApp1
             this.Close();
         }
 
-        
+       
+        private void cus_menu_strip_Click(object sender, EventArgs e)
+        {
+            SqlCommand sqlCommand;
+            string query = "select customerName  from customerFactory  where userId = @userId";
+            sqlCommand = new SqlCommand(query, sqlConnection);
+            sqlCommand.Parameters.AddWithValue("@userId", LogInForm.idOfCustomer);
+            SqlDataReader sqlData = sqlCommand.ExecuteReader();
+            while (sqlData.Read())
+            {
+                cusname.Text  = sqlData["customerName"].ToString();
+            }
+        }
     }
 }
