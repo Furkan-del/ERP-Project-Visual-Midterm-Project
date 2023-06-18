@@ -1,4 +1,4 @@
-# ERP-Project-Visual-Midterm-Project
+# ERP-Project-Visual-Midterm- Final Project
 
 This project created for the Midterm Exam.
 
