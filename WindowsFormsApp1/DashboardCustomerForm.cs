@@ -119,7 +119,7 @@ namespace WindowsFormsApp1
                 idCustomer = int.Parse(sqlDataReader["id"].ToString());
                 cusname.Text = sqlDataReader["customerName"].ToString();
                 customerName = cusname.Text;
-                location_men_itm.Text = sqlDataReader["addressOfFactory"].ToString();
+              
 
             }
             sqlDataReader.Close();

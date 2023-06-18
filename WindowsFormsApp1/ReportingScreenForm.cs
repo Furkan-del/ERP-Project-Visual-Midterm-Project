@@ -25,8 +25,7 @@ namespace WindowsFormsApp1
 
         private void filterButton_Click(object sender, EventArgs e)
         {
-
-            try
+         try
             {
                 string query = "select productName,warehousename,confirmationDeliver,quantityOfProduct,actualDepartureDate,cargoParcelAmount,estimatedArrivalDate,warehousename,quantityOfProduct from expedition_infos where warehousename = @warehouseName ";
                 sqlCommand = new SqlCommand(query, sqlConnection);
@@ -35,11 +34,11 @@ namespace WindowsFormsApp1
                 DataTable table = new DataTable();
                 sqlDataAdapter.Fill(table);
                 report_data_view.DataSource = table;
-            }catch(Exception ex)
+            }
+            catch(Exception ex)
             {
                 MessageBox.Show("Error", ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Stop);
-            }
-                
+            }           
         }
 
         private void dateFilter_Click(object sender, EventArgs e)
